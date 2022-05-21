@@ -50,6 +50,106 @@
 @include adaptiveValue("font-size", 20, 10, 480, 320);
 В примере произойдет следующее: значение font-size будет 50px, в промежутке ширин экрана от 800px до 480px, он будет отзывчиво адаптироваться от 50px до 20px. А в промежутке от 480px до 320px отзывчиво адаптироваться от 20px до 10px.
 */
+/*@font-face {
+   font-family: 'icons';
+   src:  url('fonts/icons.eot?sb02g3');
+   src:  url('fonts/icons.eot?sb02g3#iefix') format('embedded-opentype'),
+     url('fonts/icons.ttf?sb02g3') format('truetype'),
+     url('fonts/icons.woff?sb02g3') format('woff'),
+     url('fonts/icons.svg?sb02g3#icons') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+ }*/
+@font-face {
+  font-family: Geometria;
+  font-display: swap;
+  src: url("/fonts/Geometria-Bold.woff2") format("woff2"), url("/fonts/Geometria-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Geometria;
+  font-display: swap;
+  src: url("/fonts/Geometria-ExtraBold.woff2") format("woff2"), url("/fonts/Geometria-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Geometria;
+  font-display: swap;
+  src: url("/fonts/Geometria-Light.woff2") format("woff2"), url("/fonts/Geometria-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Geometria;
+  font-display: swap;
+  src: url("/fonts/Geometria-Medium.woff2") format("woff2"), url("/fonts/Geometria-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Geometria;
+  font-display: swap;
+  src: url("/fonts/Geometria-Regular.woff2") format("woff2"), url("/fonts/Geometria-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("/fonts/icons.woff2") format("woff2"), url("/fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-another:before {
+  content: "\e900";
+}
+
+._icon-car:before {
+  content: "\e901";
+}
+
+._icon-clothes:before {
+  content: "\e902";
+}
+
+._icon-finance:before {
+  content: "\e903";
+}
+
+._icon-home:before {
+  content: "\e904";
+}
+
+._icon-hygiene:before {
+  content: "\e905";
+}
+
+._icon-medicines:before {
+  content: "\e906";
+}
+
+._icon-vegetables:before {
+  content: "\e907";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -200,3 +300,83 @@ body.lock {
 	}
 }
 */
+.page-404 {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 220px 0 30px 0;
+}
+@media (max-width: 29.99875em) {
+  .page-404 {
+    margin: 126px 0 20px 0;
+  }
+}
+.page-404__body {
+  text-align: center;
+}
+.page-404__tittle {
+  margin-bottom: 15px;
+}
+@supports (font-size: clamp( 3.375rem , 0.5113636364rem  +  14.3181818182vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: clamp( 3.375rem , 0.5113636364rem  +  14.3181818182vw , 11.25rem );
+  }
+}
+@supports not (font-size: clamp( 3.375rem , 0.5113636364rem  +  14.3181818182vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: calc(
+         3.375rem + 7.875 * (100vw - 20rem) / 55
+      );
+  }
+}
+.page-404__text {
+  margin-bottom: 30px;
+}
+@supports (font-size: clamp( 1.125rem , 0.625rem  +  2.5vw , 2.5rem )) {
+  .page-404__text {
+    font-size: clamp( 1.125rem , 0.625rem  +  2.5vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.625rem  +  2.5vw , 2.5rem )) {
+  .page-404__text {
+    font-size: calc(
+         1.125rem + 1.375 * (100vw - 20rem) / 55
+      );
+  }
+}
+.page-404__button {
+  font-family: "Muller";
+  color: #111111;
+}
+@supports (font-size: clamp( 1.125rem , 0.8522727273rem  +  1.3636363636vw , 1.875rem )) {
+  .page-404__button {
+    font-size: clamp( 1.125rem , 0.8522727273rem  +  1.3636363636vw , 1.875rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.8522727273rem  +  1.3636363636vw , 1.875rem )) {
+  .page-404__button {
+    font-size: calc(
+         1.125rem + 0.75 * (100vw - 20rem) / 55
+      );
+  }
+}
+.page-404__button a {
+  position: relative;
+}
+.page-404__button a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #FAD900;
+  transition: width 0.3s ease-in-out;
+}
+.page-404__button a:hover::after {
+  width: 100%;
+}

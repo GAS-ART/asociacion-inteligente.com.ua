@@ -14,6 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
+
+Route::get('/', function () {App::setLocale('ru'); return view('home');})->name('index');
+Route::get('/ru', function () {App::setLocale('ru'); return  redirect('/');});
+
+Route::get('/{locale}', function ($locale) {
+   
+    if (! in_array($locale, ['es', 'ru'])) { 
+ 
+       abort(404);
+ 
+    }  else if ($locale == 'es') {
+ 
+       App::setLocale('es');
+       return view('home');
+ 
+    }
+    else if ($locale == 'ru') {
+ 
+     App::setLocale('ru');
+     return view('home');
+ 
+  }
+ })->name('home.lang');
