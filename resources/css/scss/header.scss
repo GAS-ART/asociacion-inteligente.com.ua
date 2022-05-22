@@ -1,6 +1,9 @@
 //====================================================================================================
 .header {
-
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
 	&__wraper {
 		height: 60px;
 	}
@@ -9,22 +12,51 @@
 		display: flex;
 		align-items: center;
 		height: inherit;
+		
 	}
 
 	&__logo {
 		flex: 1 0 auto;
+		@media (max-width: em(370)) {
+		position: relative;
+		width: 126px;
+		height: 30px;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 126px;
+			height: 30px;
+			object-fit: fill;
+			};
+		}
 	}
 
 	&__options {
 		flex: 0 1 auto;
 		display: flex;
 		align-items: center;
+		position: relative;
 	}
 
 	&__menu {
 		@include adaptiveValueREM('margin-right', 50,15, 1200, 768, 1);
 		@media (max-width: $mobile) {
-		display: none;
+			position: absolute;
+			top: 60px;
+			right: -100%;
+			height: 100vh;
+			background-color: $blue;
+			padding: 31px;
+			z-index: 50;
+			margin-right: unset;
+			transition: all 0.3s ease 0s;
+			&.open{
+				right: 0;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+		padding: 31px 21.5px;
 		}
 	}
 
@@ -94,20 +126,32 @@
 					fill: none;
 				}
 			}
+			@media (max-width: $mobile) {
+			display: none;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+		padding: 0 10px;
 		}
 	}
 }
 .menu {
 
 	&__list {
-				display: grid;
-				grid-template-columns: repeat(6, min-content);
-				white-space: nowrap;
-				@include adaptiveValueREM('gap', 35,15, 1200, 992, 1);
-				@media (max-width: $tablet) {
-					grid-template-columns: repeat(3, min-content);
-					grid-template-rows: auto auto;
-				}
+		display: grid;
+		grid-template-columns: repeat(6, min-content);
+		white-space: nowrap;
+		@include adaptiveValueREM('column-gap', 35,15, 1200, 992, 1);
+		//@include adaptiveValueREM('column-gap', 50,15, 768, 320, 1);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(3, min-content);
+			row-gap: 15px;
+			grid-template-rows: auto auto;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+			grid-template-rows: repeat(6, 35px);
+		}
 	}
 
 	&__item {
@@ -135,6 +179,9 @@
 			&::after{
 				width: 100%;
 			}
+		}
+		@media (max-width: $mobile) {
+			color: #fff;
 		}
 	}
 }
@@ -168,9 +215,14 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
+	margin-right: 30px;
+	@media (max-width: $mobileSmall) {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
@@ -198,7 +250,7 @@
 		span {
 			top: calc(50% - 1px);
 		}
-		.menu-open & {
+		&.open  {
 			span {
 				transform: scale(0);
 			}
@@ -213,4 +265,4 @@
 		}
 	}
 }
-*/
+

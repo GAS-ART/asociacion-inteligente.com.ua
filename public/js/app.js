@@ -8,6 +8,26 @@
 /***/ (() => {
 
 //require('./bootstrap');
+window.onload = function () {
+  document.addEventListener('click', documentActions);
+
+  function documentActions(e) {
+    var target = e.target; //remove burger
+
+    if (!target.closest('.burger') && !target.closest('.icon-menu')) {
+      menuBtn.classList.remove('open');
+      burger.classList.remove('open');
+    }
+  } //Menu burger
+
+
+  var menuBtn = document.querySelector('.icon-menu');
+  var burger = document.querySelector('.burger');
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+};
 
 /***/ }),
 

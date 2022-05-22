@@ -8,7 +8,7 @@
             </a>
          </div>
          <div class="header__options">
-            <div class="header__menu">
+            <div class="header__menu burger">
                <nav class="menu">
                   <ul class="menu__list">
                      <li class="menu__item">
@@ -44,9 +44,8 @@
                   </ul>
                </nav>
             </div>
-            <div class="header__burger burger">
-               <div class="burger__body">
-               </div>
+            <div class="icon-menu">
+               <span></span>
             </div>
             <div class="header__actions">
                <div class="header__language language">
