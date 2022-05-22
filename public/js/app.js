@@ -17,6 +17,11 @@ window.onload = function () {
     if (!target.closest('.burger') && !target.closest('.icon-menu')) {
       menuBtn.classList.remove('open');
       burger.classList.remove('open');
+    } //remove language select
+
+
+    if (!target.closest('.language-btn')) {
+      languageBtn.classList.remove('active');
     }
   } //Menu burger
 
@@ -26,6 +31,18 @@ window.onload = function () {
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('open');
     burger.classList.toggle('open');
+  }); //Переключение языков (комп и мобилка)
+
+  var languageBtn = document.querySelector('.language-btn');
+  languageBtn.addEventListener('click', function (e) {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      // Устройства со стилусом
+      if (!languageBtn.classList.contains('active')) {
+        e.preventDefault();
+      }
+
+      languageBtn.classList.toggle('active');
+    }
   });
 };
 

@@ -351,12 +351,12 @@ body.lock {
   text-transform: capitalize;
   transition: all 0.5s ease 0s;
 }
-.header__language:hover .language__select {
+.header__language:hover .language__select, .header__language .active .language__select {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
-.header__language:hover .language__select:not(:first-child) {
+.header__language:hover .language__select:not(:first-child), .header__language .active .language__select:not(:first-child) {
   top: calc(100% - 11px);
 }
 .header__donate {

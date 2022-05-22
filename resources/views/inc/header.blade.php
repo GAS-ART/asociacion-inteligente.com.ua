@@ -48,7 +48,7 @@
                <span></span>
             </div>
             <div class="header__actions">
-               <div class="header__language language">
+               <div class="header__language language language-btn">
                   <div class="language__select">
                      <a class="language__link" href="{{ route('locale', __('language.current_lang')) }}">
                         <div class="language__text">@lang('language.current_lang')</div>
