@@ -8,12 +8,4 @@
 
 @section('content')
 
-
-<div class="test__container">
-
-   <div class="test-text _icon-finance"> @lang('portfolio.test') </div>
-   <br>
-   <?php echo URL::previous(); ?>
-</div>
-
 @endsection

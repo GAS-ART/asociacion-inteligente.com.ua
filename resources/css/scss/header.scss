@@ -1,4 +1,169 @@
 //====================================================================================================
+.header {
+
+	&__wraper {
+		height: 60px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		height: inherit;
+	}
+
+	&__logo {
+		flex: 1 0 auto;
+	}
+
+	&__options {
+		flex: 0 1 auto;
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu {
+		@include adaptiveValueREM('margin-right', 50,15, 1200, 768, 1);
+		@media (max-width: $mobile) {
+		display: none;
+		}
+	}
+
+	&__burger{
+		display: none;
+		@media (max-width: $mobile) {
+		display: block;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		font-size: $menuSize;
+		font-weight: 500;
+		line-height: 1.26;
+	}
+
+	&__language {
+		position: relative;
+		height: 60px;
+		background-color: $blue;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		text-transform: capitalize;
+		transition: all 0.5s ease 0s;
+		&:hover{
+			.language__select{
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				&:not(:first-child){
+					top: calc(100% - 11px);
+				}
+			}
+		}
+	}
+
+	&__donate {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		padding: 0 20px;
+		background-color: $yellow;
+		color: $mainColor;
+		font-size: $menuSize;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			svg{
+				path{
+					&:first-child{
+						fill: $mainColor;
+					}
+				}
+			}
+		}
+		.donate{
+		}
+		svg{
+			margin-right: 10px;
+			transition: all 1s ease 0s;
+			path{
+				transition: all 1s ease 0s;
+				&:first-child{
+					transition: all 1s ease 0s;
+					fill: none;
+				}
+			}
+		}
+	}
+}
+.menu {
+
+	&__list {
+				display: grid;
+				grid-template-columns: repeat(6, min-content);
+				white-space: nowrap;
+				@include adaptiveValueREM('gap', 35,15, 1200, 992, 1);
+				@media (max-width: $tablet) {
+					grid-template-columns: repeat(3, min-content);
+					grid-template-rows: auto auto;
+				}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: $menuSize;
+		font-weight: 500;
+		line-height: 1.26;
+		color: $mainColor;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0%;
+			height: 3px;
+			background-color: $yellow;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			color: $yellow;
+			&::after{
+				width: 100%;
+			}
+		}
+	}
+}
+.language {
+
+	&__select {
+		background-color: $blue;
+		color: #fff;
+		padding: 0 5px;
+		transition: all 0.5s ease 0s;
+		&:not(:first-child){
+			position: absolute;
+			top: 110%;
+			left: 0;
+			padding: 11px 5px 21px 5px; 
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
+
+	&__link {
+	}
+
+	&__text {
+		min-width: 22px;
+		text-align: center;
+	}
+}
 
 //====================================================================================================
 
