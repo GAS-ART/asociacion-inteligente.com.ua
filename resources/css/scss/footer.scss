@@ -1,3 +1,218 @@
 //====================================================================================================
+.footer {
+padding: 20px 0;
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(140px, 300px) min-content minmax(min-content, 200px) min-content;
+      @include adaptiveValueREM('column-gap', 135, 65, 1200, 992, 1);
+      @media (max-width: $tablet) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         row-gap: 25px;
+      }
+      @media (max-width: $mobileSmall) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(4, auto);
+      }
+   }
+
+   &__row{
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      @media (max-width: $mobileSmall) {
+      align-items: flex-start;
+      }
+   }
+
+   &__logo {
+      a{
+         display: block;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__text {
+      color: $text;
+      line-height: 1.5;
+      @media (max-width: $tablet) {
+         text-align: center;
+         max-width: 300px;
+      }
+      @media (max-width: $mobileSmall) {
+      text-align: left;
+      }
+   }
+
+   &__menu {
+   }
+
+   &__menu-list {
+   }
+
+   &__menu-item {
+   }
+
+   &__contacts {
+   }
+
+   &__donate {
+   }
+}
+.menu-footer {
+
+   &__item {
+      &:not(:last-child){
+      margin-bottom: 7px;
+      }
+   }
+
+   &__link {
+      font-size: rem(15);
+		font-weight: 500;
+		line-height: 1.26;
+		color: $mainColor;
+		position: relative;
+		transition: all 0.3s ease 0s;
+      white-space: nowrap;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0%;
+			height: 3px;
+			background-color: $yellow;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			color: $yellow;
+			&::after{
+				width: 100%;
+			}
+		}
+   }
+}
+.contacts-footer {
+   font-size: rem(14);
+   line-height: 1.2857;
+   @media (max-width: $tablet) {
+   text-align: center;
+   }
+   @media (max-width: $mobileSmall) {
+      text-align: left;
+      }
+
+   &__address {
+      p{
+         &:first-child{
+            font-weight: 300;
+            margin-bottom: 5px;
+         }
+         &:last-child{
+            font-weight: 500;
+         }
+      }
+      color: $mainColor;
+      margin-bottom: 10px;
+      @media (max-width: $tablet) {
+         max-width: 200px;
+      }
+   }
+
+   &__phone {
+      p{
+         font-weight: 300;
+         margin-bottom: 5px;
+         color: $mainColor;
+      }
+      a{
+         position: relative;
+         transition: all 0.3s ease 0s;
+         font-weight: 500;
+         color: $mainColor;
+         &::after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background-color: $yellow;
+            transition: all 0.3s ease 0s;
+         }
+         &:hover {
+            color: $yellow;
+            &::after{
+               width: 100%;
+            }
+         }
+      }
+      margin-bottom: 10px;
+   }
+   &__email {
+      p{
+         font-weight: 300;
+         margin-bottom: 5px;
+         color: $mainColor;
+      }
+      a{
+         position: relative;
+         font-weight: 500;
+         transition: all 0.3s ease 0s;
+         color: $mainColor;
+         &::after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background-color: $yellow;
+            transition: all 0.3s ease 0s;
+         }
+         &:hover {
+            color: $yellow;
+            &::after{
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+.donate-footer {
+
+   &__title {
+      font-size: rem(14);
+      font-weight: 500;
+      color: $mainColor;
+      white-space: nowrap;
+      margin-bottom: 15px;
+   }
+
+   &__list {
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+   }
+
+   &__img {
+      margin-right: 10px;
+   }
+
+   &__link {
+      font-size: rem(16);
+      font-weight: 500;
+      line-height: 1.25;
+      white-space: nowrap;
+   }
+}
 
 //====================================================================================================
