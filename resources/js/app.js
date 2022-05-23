@@ -36,4 +36,10 @@ window.onload = function () {
          languageBtn.classList.toggle('active');
       }
    });
+
+   $('.list-questions__item-btn').click(function (e) {
+      $(e.target).closest('div').next().slideToggle(500);
+      $(e.target).toggleClass('active');
+   });
+
 }

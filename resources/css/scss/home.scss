@@ -142,7 +142,7 @@
    }
 
    &__title {
-      @include adaptiveValueREM('font-size', 50,16);
+      @include adaptiveValueREM('font-size', 50,24);
       color: $title;
       font-weight: 800;
       max-width: 180px;
@@ -171,3 +171,264 @@
    }
 }
 /*==========================WHO==========================*/
+
+/*==========================HELP==========================*/
+.help {
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+   margin-bottom: 60px;
+   }
+
+   &__container {
+   }
+
+   &__title {
+      text-align: center;
+      font-weight: 800;
+      @include adaptiveValueREM('font-size', 50,24);
+      color: $title;
+      margin-bottom: 50px;
+      line-height: 1.26;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      row-gap: 50px;
+      @include adaptiveValueREM('column-gap', 30,15,1200, 992, 1);
+      @media (max-width: $tablet) {
+         grid-template-columns:1fr 1fr;
+         grid-template-rows: auto auto auto;
+         row-gap: 40px;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns:1fr;
+         grid-template-rows: repeat(6, auto);
+      }
+   }
+
+   &__item {
+   }
+}
+.item-help {
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+   margin-bottom: 60px;
+   }
+   &__img {
+      position: relative;
+      margin-bottom: 25px;
+      img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      }
+   }
+
+   &__title {
+      color: $mainColor;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 1.25;
+      text-align: center;
+      margin-bottom: 15px;
+   }
+
+   &__link {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: block;
+      padding: 10px 20px;
+      background-color: $yellow;
+      text-align: center;
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 1.2666;
+      white-space: nowrap;
+      width: min-content;
+   }
+}
+
+/*==========================HELP==========================*/
+
+/*==========================QUESTIONS==========================*/
+.questions {
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+   margin-bottom: 60px;
+   }
+
+   &__container {
+      position: relative;
+      &::before{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 12px;
+         height: 100%;
+         background-color: $yellow;
+      }
+   }
+
+   &__body {
+      position: relative;
+      padding-top: 20px;
+      @include adaptiveValueREM('margin-left',40,10,1200, 992, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: unset;
+      }
+   }
+
+   &__text {
+      text-align: left;
+      max-width: 480px;
+      @include adaptiveValueREM('margin-right',70,35,1200, 992, 1);
+      @media (max-width: $tablet) {
+      margin-right: unset;
+      margin-bottom: 40px;
+      }
+   }
+
+   &__list {
+      min-width: 600px;
+      @media (max-width: $tablet) {
+         min-width: unset;
+         @include adaptiveValueREM('width', 600,290,768,320,1);
+      }
+   }
+}
+.text-questions {
+
+   &__title {
+      @include adaptiveValueREM('font-size', 50,24);
+      color: $title;
+      font-weight: 800;
+      line-height: 1.26;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      color: $text;
+      line-height: 18px;
+      p{
+         &:not(:last-child){
+         margin-bottom: 35px;
+         }
+      }
+   }
+}
+.list-questions {
+
+   &__item {
+      position: relative;
+      padding: 25px 0;
+      &:first-child{
+         padding: 0 0 25px 0;
+      }
+      &::after{
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 1px;
+         background-color: #E0E0E0;
+      }
+   }
+
+   &__item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+         &:first-child{
+            color: $mainColor;
+            font-weight: 500;
+            font-size: rem(20);
+            line-height: 1.25;
+            @media (max-width: $tablet) {
+            margin-right: 15px;
+            }
+         }
+         &:last-child{
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: $yellow;
+            flex: 0 0 auto;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            &::before{
+               content: '';
+               position: absolute;
+               top: 50%;
+               left:50%;
+               transform: translate(-50%, -50%);
+               width: 15px;
+               height: 3px;
+               background-color: #fff;
+               transition: all 0.3s ease 0s;
+            }
+            &::after{
+               content: '';
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               width: 3px;
+               height: 15px;
+               background-color: #fff;
+               transition: all 0.3s ease 0s;
+            }
+            @media (pointer: fine) {
+               &:hover {
+                  background-color: $blue;
+                  &::before, &::after{
+                     background-color: $yellow;
+                  }
+               }
+            }
+            &.active{
+               background-color: $mainColor;
+               &::before, &::after{
+                  background-color: $yellow;
+               }
+               &::after{
+                  transform: translate(-50%, -50%) rotate(90deg);
+               }
+               @media (pointer: fine) {
+               &:hover {
+                  background-color: $blue;
+                  &::before, &::after{
+                     background-color: #fff ;
+                  }
+               }
+               }
+            }
+         }
+      }
+   }
+
+   &__item-answer {
+      display: none;
+      margin-top: 30px;
+      color: $text;
+      line-height: 18px;
+   }
+}
+/*==========================QUESTIONS==========================*/
