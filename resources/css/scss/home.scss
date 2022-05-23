@@ -1,0 +1,173 @@
+/*==========================BANER==========================*/
+.baner {
+   position: relative;
+   margin-top: 60px;
+   background-image: url('/img/home/main-baner.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+   margin-bottom: 60px;
+   }
+   &__container {
+      position: relative;
+      padding-bottom: 26.042%;
+      @media (max-width: $mobileSmall) {
+         padding-bottom: 30%;
+      }
+      &::before{
+         content: '';
+         position: absolute;
+         top: 0%;
+         left: 0px;
+         width: 12px;
+         height: 100%;
+         background-color: $yellow;
+         display: none;
+         @media (max-width: $mobile) {
+         display: block;
+         }
+      }
+   }
+
+   &__body {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 50%;
+      margin-left: 35px;
+      max-width: 600px;
+      line-height: 1.257;
+      &::before{
+         content: '';
+         position: absolute;
+         top: 0%;
+         left: -35px;
+         width: 12px;
+         height: 276px;
+         background-color: $yellow;
+      }
+      @media (max-width: em(1400)) {
+      max-width: 100%;
+      &::before{
+         height: 100%;
+      }
+      }
+      @media (max-width: $mobile) {
+      margin-left: 0;
+      &::before{
+         display: none;
+      }
+      }
+      @media (max-width: $mobileSmall) {
+      top: 0;
+      transform: translateY(0%);
+      }
+   }
+
+   &__items{
+      
+   }
+
+   &__title {
+      @include adaptiveValueREM('font-size', 70,22);
+      font-weight: 700;
+      color: #fff;
+     @include adaptiveValueREM('margin-bottom', 40,10,1200, 768, 1);
+   }
+
+   &__donate {
+      img{
+         display: inline-block;
+         margin-right: 10px;
+         line-height: 1.25;
+         color: $mainColor;
+         @media (max-width: $mobileSmall) {
+            margin-right: 2px;
+         }
+      }
+      span{
+         font-weight: 500;
+         @media (max-width: $mobile) {
+            font-size: rem(14);
+         }
+      }
+      @media (max-width: $mobileSmall) {
+      position: absolute;
+      bottom: calc(-100% + 5px) ;
+      }
+   }
+
+   &__donate-button {
+      padding: 10px 25px;
+      background-color: #fff;
+      &:not(:last-child){
+         margin-right: 20px;
+      }
+      @media (max-width: $mobile) {
+         padding: 10px 10px;
+         &:not(:last-child){
+            margin-right: 10px;
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 3px 3px;
+         &:not(:last-child){
+            margin-right: 5px;
+         }
+      }
+   }
+}
+/*==========================BANER==========================*/
+
+/*==========================WHO==========================*/
+.who {
+   position: relative;
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+   margin-bottom: 60px;
+   }
+   &__container {
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $tablet) {
+      align-items: center;
+      }
+      @media (max-width: $mobile) {
+      flex-direction: column;
+      }
+   }
+
+   &__title {
+      @include adaptiveValueREM('font-size', 50,16);
+      color: $title;
+      font-weight: 800;
+      max-width: 180px;
+      line-height: 1.26;
+      margin-right: 120px;
+      @media (max-width: $mobile) {
+      max-width: 100%;
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 20px;
+      }
+   }
+
+   &__text {
+      width: 100%;
+      color: $text;
+      line-height: 1.8;
+      p{
+         &:not(:last-child){
+         margin-bottom: 35px;
+         }
+      }
+      @media (max-width: $mobile) {
+      text-align: center;
+      }
+   }
+}
+/*==========================WHO==========================*/
