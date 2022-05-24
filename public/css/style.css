@@ -866,6 +866,11 @@ body.lock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  transition: all 0.3s ease 0s;
+}
+.item-help__link:hover {
+  background-color: #111111;
+  color: #FAD900;
 }
 
 /*==========================HELP==========================*/
@@ -1082,6 +1087,137 @@ body.lock {
 }
 
 /*==========================QUESTIONS==========================*/
+/*==========================CHARITY==========================*/
+.charity {
+  position: relative;
+  background-image: url("/img/home/charity.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+}
+@media (max-width: 47.99875em) {
+  .charity {
+    margin-bottom: 60px;
+  }
+}
+.charity__body {
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+.charity__title {
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.26;
+  margin-bottom: 1em;
+  text-align: center;
+}
+@supports (font-size: clamp( 1.5rem , 0.9090909091rem  +  2.9545454545vw , 3.125rem )) {
+  .charity__title {
+    font-size: clamp( 1.5rem , 0.9090909091rem  +  2.9545454545vw , 3.125rem );
+  }
+}
+@supports not (font-size: clamp( 1.5rem , 0.9090909091rem  +  2.9545454545vw , 3.125rem )) {
+  .charity__title {
+    font-size: calc(
+         1.5rem + 1.625 * (100vw - 20rem) / 55
+      );
+  }
+}
+.charity__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 225px 225px;
+}
+@supports (row-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem )) {
+  .charity__items {
+    row-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem );
+  }
+}
+@supports not (row-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem )) {
+  .charity__items {
+    row-gap: calc(
+         0.9375rem + 0.9375 * (100vw - 62rem) / 13
+      );
+  }
+}
+@supports ((-moz-column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem )) or (column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem ))) {
+  .charity__items {
+    -moz-column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem );
+         column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem );
+  }
+}
+@supports not ((-moz-column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem )) or (column-gap: clamp( 0.9375rem , -3.5336538462rem  +  7.2115384615vw , 1.875rem ))) {
+  .charity__items {
+    -moz-column-gap: calc(
+         0.9375rem + 0.9375 * (100vw - 62rem) / 13
+      );
+         column-gap: calc(
+         0.9375rem + 0.9375 * (100vw - 62rem) / 13
+      );
+  }
+}
+.charity__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+@media (pointer: fine) {
+  .charity__item:hover {
+    background-color: #28478A;
+  }
+  .charity__item:hover .item-charity__icon {
+    color: #FAD900;
+  }
+  .charity__item:hover .item-charity__icon-block {
+    background-color: #fff;
+  }
+  .charity__item:hover .item-charity__title {
+    color: #fff;
+  }
+}
+
+.item-charity__icon-body {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.item-charity__icon {
+  position: absolute;
+  font-size: 2.5rem;
+  padding: 20px;
+  transition: all 0.3s ease 0s;
+  overflow: visible;
+  color: #28478A;
+  opacity: 1;
+  font-weight: 500;
+  z-index: 2;
+  transition: all 0.3s ease 0s;
+}
+.item-charity__icon-block {
+  background-color: #FAD900;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.15;
+  transition: all 0.3s ease 0s;
+}
+.item-charity__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #111111;
+  transition: all 0.3s ease 0s;
+}
+
+/*==========================CHARITY==========================*/
 .footer {
   padding: 20px 0;
 }

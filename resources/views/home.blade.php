@@ -130,4 +130,78 @@
       </div>
    </div>
 </section>
+<section class="charity">
+   <div class="charity__container">
+      <div class="charity__body">
+         <h2 class="charity__title">@lang('home.charity.title')</h2>
+         <div class="charity__items">
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-finance"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+
+               <h3 class="item-charity__title">@lang('home.charity.finance')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-medicines"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.medical')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-vegetables"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.food')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-hygiene"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.hygiene')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-clothes"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.clothes')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-car"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.transport')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-home"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.housing')</h3>
+            </a>
+
+            <a href="#" class="charity__item item-charity">
+               <div class="item-charity__icon-body">
+                  <div class="item-charity__icon _icon-another"></div>
+                  <div class="item-charity__icon-block"></div>
+               </div>
+               <h3 class="item-charity__title">@lang('home.charity.other')</h3>
+            </a>
+
+         </div>
+      </div>
+   </div>
+</section>
 @endsection
