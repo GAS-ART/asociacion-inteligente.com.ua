@@ -8,6 +8,7 @@
             @yield('content')
          </main>
       @include('inc.footer')
+      @include('inc.popup')
    </div>
 </body>
 

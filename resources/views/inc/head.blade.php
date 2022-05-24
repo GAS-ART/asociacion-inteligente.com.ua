@@ -19,8 +19,8 @@
    <meta property="og:site_name" content="artgas.pro" />
    <meta property="og:image" content="" />
 
- <!--  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+ <!--  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
    <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=1' }}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
- <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+ <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
    <script src="{{asset('js/app.js') . '?_v=1' }}"></script>
 </head>

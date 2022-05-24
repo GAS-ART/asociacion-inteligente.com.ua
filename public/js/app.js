@@ -1,13 +1,18 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_popup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/popup.js */ "./resources/js/modules/popup.js");
 //require('./bootstrap');
+
+
 window.onload = function () {
   document.addEventListener('click', documentActions);
 
@@ -22,6 +27,12 @@ window.onload = function () {
 
     if (!target.closest('.language-btn')) {
       languageBtn.classList.remove('active');
+    } //popUp
+
+
+    if (target.closest('.link-on-popup')) {
+      (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(target.closest('.link-on-popup').dataset.popupId);
+      e.preventDefault();
     }
   } //Menu burger
 
@@ -47,8 +58,159 @@ window.onload = function () {
   $('.list-questions__item-btn').click(function (e) {
     $(e.target).closest('div').next().slideToggle(500);
     $(e.target).toggleClass('active');
+  }); //Стилизация Select
+
+  var bookingForm = document.querySelector('#bookingform');
+  var placeholderText = 'Вид помощи';
+
+  if (bookingForm.classList.contains('es')) {
+    placeholderText = 'Elige el servicio';
+  }
+
+  $('.select-form').select2({
+    placeholder: placeholderText,
+    minimumResultsForSearch: -1
+  }); // Отпарвка данных из формы
+
+  $("#bookingform").submit(function (event) {
+    event.preventDefault();
+    $(".popup__load").addClass('active');
+    $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:8000/feedback',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function success() {
+        $(".name-error").html('');
+        $(".phone-error").html('');
+        $(".service-error").html('');
+        $(".popup").addClass("send");
+        bookingForm.reset();
+        $(".select-form").select2("destroy");
+        $('.select-form').select2({
+          placeholder: 'Выберету услугу',
+          minimumResultsForSearch: -1
+        });
+        $(".popup__load").removeClass('active');
+      },
+      error: function error(err) {
+        $(".popup__load").removeClass('active');
+
+        if (bookingForm.classList.contains('es')) {
+          var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er, _err$responseJSON3, _err$responseJSON3$er;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.name) {
+            var text = err.responseJSON.errors.name[0];
+
+            if (text == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('El campo Nombre no esta rellenado');
+            } else if (text == 'Поле "Имя" не должно содержать цифр') {
+              $(".name-error").html('Campo "Nombre" no puede contener los números');
+            } else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+            } else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON2 = err.responseJSON) !== null && _err$responseJSON2 !== void 0 && (_err$responseJSON2$er = _err$responseJSON2.errors) !== null && _err$responseJSON2$er !== void 0 && _err$responseJSON2$er.phone) {
+            var _text = err.responseJSON.errors.phone[0];
+
+            if (_text == 'Не заполнено поле "Номер телефона"') {
+              $(".phone-error").html('El campo no esta rellenado telefono');
+            } else if (_text == 'Не верный формат номера телефона') {
+              $(".phone-error").html('Introduce un telefono válido');
+            }
+          } else {
+            $(".phone-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON3 = err.responseJSON) !== null && _err$responseJSON3 !== void 0 && (_err$responseJSON3$er = _err$responseJSON3.errors) !== null && _err$responseJSON3$er !== void 0 && _err$responseJSON3$er.service) {
+            var _text2 = err.responseJSON.errors.service[0];
+
+            if (_text2 == 'Пожалуйста выберете тип услуги из списка') {
+              $(".service-error").html('Por favor, elige el servicio');
+            }
+          } else {
+            $(".service-error").html('');
+          }
+        } else {
+          var _err$responseJSON4, _err$responseJSON4$er, _err$responseJSON5, _err$responseJSON5$er, _err$responseJSON6, _err$responseJSON6$er;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON4 = err.responseJSON) !== null && _err$responseJSON4 !== void 0 && (_err$responseJSON4$er = _err$responseJSON4.errors) !== null && _err$responseJSON4$er !== void 0 && _err$responseJSON4$er.name) {
+            $(".name-error").html(err.responseJSON.errors.name[0]);
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON5 = err.responseJSON) !== null && _err$responseJSON5 !== void 0 && (_err$responseJSON5$er = _err$responseJSON5.errors) !== null && _err$responseJSON5$er !== void 0 && _err$responseJSON5$er.phone) {
+            $(".phone-error").html(err.responseJSON.errors.phone[0]);
+          } else {
+            $(".phone-error").html('');
+            ;
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON6 = err.responseJSON) !== null && _err$responseJSON6 !== void 0 && (_err$responseJSON6$er = _err$responseJSON6.errors) !== null && _err$responseJSON6$er !== void 0 && _err$responseJSON6$er.service) {
+            $(".service-error").html(err.responseJSON.errors.service[0]);
+          } else {
+            $(".service-error").html('');
+          }
+        }
+      }
+    });
   });
 };
+
+/***/ }),
+
+/***/ "./resources/js/modules/popup.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/popup.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "popUp": () => (/* binding */ popUp)
+/* harmony export */ });
+function popUp(popupId) {
+  var popUp = document.getElementById(popupId);
+  var bodyLock = document.getElementById('body');
+  var popupCloseIcon = popUp.querySelector('.close-popup');
+  var popupBtn = popUp.querySelector('.confirm-button');
+  var popupSending = popUp.querySelector('.popup__load');
+  var filePreview = popUp.querySelector('.preview-file') || false;
+  popUp.classList.add('open');
+  bodyLock.classList.add('lock');
+  popupCloseIcon.addEventListener('click', function (e) {
+    popupClose(popUp);
+    e.preventDefault();
+  });
+  popupBtn.addEventListener('click', function () {
+    popupClose(popUp);
+  });
+
+  function popupClose(popupActive) {
+    popupActive.classList.remove('open');
+    bodyLock.classList.remove("lock");
+    popUp.classList.remove('send');
+
+    if (filePreview) {
+      filePreview.innerHTML = '';
+    }
+  }
+
+  popUp.addEventListener('mousedown', function (e) {
+    if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
+      popupClose(popUp);
+    }
+  });
+}
+;
 
 /***/ }),
 
@@ -58,7 +220,6 @@ window.onload = function () {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -124,6 +285,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

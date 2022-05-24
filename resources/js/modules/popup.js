@@ -2,8 +2,8 @@ export function popUp(popupId) {
 	const popUp = document.getElementById(popupId);
 	const bodyLock = document.getElementById('body');
 	const popupCloseIcon = popUp.querySelector('.close-popup');
-	const popupBtn = popUp.querySelector('.popup__button');
-	const popupSending = popUp.querySelector('.popup__send-load');
+	const popupBtn = popUp.querySelector('.confirm-button');
+	const popupSending = popUp.querySelector('.popup__load');
 	const filePreview = popUp.querySelector('.preview-file') || false;
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');

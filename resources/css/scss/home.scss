@@ -445,17 +445,25 @@
    background-image: url('/img/home/charity.jpg');
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
    margin-bottom: 100px;
    @media (max-width: $mobile) {
    margin-bottom: 60px;
    }
 
    &__container {
+ /*     position: relative;
+      padding-bottom: 40%;*/
    }
 
    &__body {
-      padding-top: 100px;
-      padding-bottom: 75px;
+     padding-top: 100px;
+     padding-bottom: 75px;
+  /* position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 100px;
+   left: 0;*/
    }
 
    &__title {
@@ -473,6 +481,15 @@
       grid-template-rows: 225px 225px;
       @include adaptiveValueREM('row-gap', 30,15,1200, 992, 1);
       @include adaptiveValueREM('column-gap', 30,15,1200, 992, 1);
+      @media (max-width: $tablet) {
+         grid-template-columns:277px 277px;
+         grid-template-rows: repeat(4, 225px);
+         justify-content: center;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns:277px;
+         grid-template-rows: repeat(8, 225px);
+      }
    }
 
    &__item {
