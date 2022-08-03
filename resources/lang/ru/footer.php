@@ -13,9 +13,13 @@
    ],
    'contacts' => 
    [
-      'address' => '<p>Адрес</p><p>Carrer de Sant Adrià, 20, 08030 Barcelona, Испания</p>',
-      'phone' => '<p>Телефон</p><a href="tel:%2B380635696965">+38 (063) 569-69-95</a>',
-      'email' => '<p>Электронная почта</p><a href="mailto:info@domain.com">info@domain.com</a>',
+      'address' => '<p>Адрес</p><p>С/Puigcugul 48 Cassa de la Selva 17244 Girona</p>',
+      'phone_title' => 'Телефон',
+      'phone' => '+38 (069) 856-08-64 Tetyana',
+      'phone_1' => '+38 (066) 489-56-61 Yuriy',
+      'phone_2' => '+38 (067) 171-94-63 Oksana',
+      'email_title' => 'Электронная почта',
+      'email' => 'inteli.gente.ua@gmail.com',
    ],
    'donate' =>
    [
