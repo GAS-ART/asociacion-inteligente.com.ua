@@ -48,7 +48,6 @@
             @lang('footer.contacts.address')
          </div>
          <div class="contacts-footer__phone">
-         <p>@lang('footer.contacts.phone_title')</p>
          <div class="contacts-footer__phone-item"><span>
             <a href="tel:%2B380698560864">@lang('footer.contacts.phone')</a>
            <a href="tel:%2B380698560864">@lang('footer.contacts.phone_1')</a>
