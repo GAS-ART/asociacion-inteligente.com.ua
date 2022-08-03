@@ -17,10 +17,10 @@
                <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
                <span>@lang('home.baner.paypal')</span>
             </a>
-            <a href="#" class="baner__donate-button">
+           <!-- <a href="#" class="baner__donate-button">
                <img src="{{ asset('img/icons/bitcoin.jpg') }}" alt="">
                <span>@lang('home.baner.crypto')</span>
-            </a>
+            </a> -->
             <a href="#" class="baner__donate-button">
                <img src="{{ asset('img/icons/card.jpg') }}" alt="">
                <span>@lang('home.baner.card')</span>

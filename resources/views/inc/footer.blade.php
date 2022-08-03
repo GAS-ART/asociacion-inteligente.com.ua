@@ -5,7 +5,7 @@
          <a href="#">
             <img src="{{ asset('img/logo.jpg') }}" alt="">
          </a>
-         <div class="footer__text">@lang('footer.text')</div>
+         <div class="footer__text"><!--lang('footer.text')--></div>
       </div>
       <div class="footer__menu footer__row">
          <nav class="menu-footer">
@@ -65,12 +65,12 @@
                </div>
                <a href="#" class="donate-footer__link">@lang('footer.donate.paypal')</a>
             </li>
-            <li class="donate-footer__item">
+            <!--<li class="donate-footer__item">
                <div class="donate-footer__img">
                   <img src="{{ asset('img/icons/bitcoin.jpg') }}" alt="">
                </div>
                <a href="#" class="donate-footer__link">@lang('footer.donate.crypto')</a>
-            </li>
+            </li> -->
             <li class="donate-footer__item">
                <div class="donate-footer__img">
                   <img src="{{ asset('img/icons/card.jpg') }}" alt="">
