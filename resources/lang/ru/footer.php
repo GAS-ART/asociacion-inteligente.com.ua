@@ -14,12 +14,10 @@
    'contacts' => 
    [
       'address' => '<p>Адрес</p><p>С/Puigcugul 48 Cassa de la Selva 17244 Girona</p>',
-      'phone_title' => 'Телефон',
-      'phone' => '+38 (069) 856-08-64 Tetyana',
-      'phone_1' => '+38 (066) 489-56-61 Yuriy',
-      'phone_2' => '+38 (067) 171-94-63 Oksana',
-      'email_title' => 'Электронная почта',
-      'email' => 'inteli.gente.ua@gmail.com',
+      'phone' => '<p>Телефон</p><a href="tel:%2B34698560864">698560864</a>',
+      'phone_1' => '<a href="tel:%2B34664895661">664895661</a>',
+      'phone_2' => '<a href="tel:%2B34717194632">717194632</a>',
+      'email' => '<p>Электронная почта</p><a href="mailto:inteli.gente.ua@gmail.com">inteli.gente.ua@gmail.com</a>',
    ],
    'donate' =>
    [
