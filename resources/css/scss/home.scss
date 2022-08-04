@@ -309,9 +309,9 @@
    }
 
    &__list {
-      min-width: 600px;
+      width: 600px;
       @media (max-width: $tablet) {
-         min-width: unset;
+         width: unset;
          @include adaptiveValueREM('width', 600,290,768,320,1);
       }
    }
@@ -322,8 +322,14 @@
       @include adaptiveValueREM('font-size', 50,24);
       color: $title;
       font-weight: 800;
-      line-height: 1.26;
+      //line-height: 1.26;
       margin-bottom: 20px;
+      position: relative;
+      top:-12px; //ADDED
+      @media (max-width: $tablet) {
+         top: 0;
+         line-height: 1.26;
+      }
    }
 
    &__text {
@@ -365,6 +371,7 @@
             font-weight: 500;
             font-size: rem(20);
             line-height: 1.25;
+            cursor: pointer;
             @media (max-width: $tablet) {
             margin-right: 15px;
             }

@@ -1,25 +1,27 @@
 <?php
 
    return [ 
-   'text' => 'Lorem Ipsum -',
+   'text' => 'Помощь Украинцам в Испании',
    'menu' => 
    [
-      'about' => 'О ',
-      'services' => 'Ус',
-      'poster' => 'А',
-      'news' => 'Новоса',
-      'help' => 'Взаимо',
-      'contact' => 'Ко',
+      'about' => 'О нас',
+      'services' => 'Услуги',
+      'poster' => 'Афиша',
+      'news' => 'Новости/Преса',
+      'help' => 'Взаимопомощь',
+      'contact' => 'Контакты',
    ],
    'contacts' => 
    [
-      'address' => '<p>А</p><p>Caспания</p>',
-      'phone' => '<p>Тел</p><a href="tel:%2B380635696965">+38 (063) 569-69-95</a>',
-      'email' => '<p>Электронная почта</p><a href="mailto:info@domain.com">info@domain.com</a>',
+      'address' => '<p>Адрес</p><p>С/Puigcugul 48 Cassa de la Selva 17244 Girona</p>',
+      'phone' => '<p>Телефон</p><a href="tel:%2B34698560864">+34 698 560 864</a>',
+      'phone_1' => '<a href="tel:%2B34664895661">+34 664 895 661</a>',
+      'phone_2' => '<a href="tel:%2B34717194632">+34 717 194 632</a>',
+      'email' => '<p>Электронная почта</p><a href="mailto:inteli.gente.ua@gmail.com">inteli.gente.ua@gmail.com</a>',
    ],
    'donate' =>
    [
-      'title' => 'Украине',
+      'title' => 'Помочь Украине',
       'paypal' => 'PayPal',
       'crypto' => 'Crypto',
       'card' => 'Credit Card',

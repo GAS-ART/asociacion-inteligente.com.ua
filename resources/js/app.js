@@ -2,6 +2,17 @@
 import { popUp } from './modules/popup.js';
 
 window.onload = function () {
+
+
+
+   //ВРЕМЕННО ОТКЛЮЧАЕМ ССЫЛКИ
+   const links = document.querySelectorAll('[href="#"]')
+   links.forEach(link => {
+      if (!link.classList.contains('link-on-popup')) {
+         link.addEventListener('click', function (e) { e.preventDefault() });
+      }
+   })
+
    document.addEventListener('click', documentActions);
 
    function documentActions(e) {
@@ -46,6 +57,10 @@ window.onload = function () {
    $('.list-questions__item-btn').click(function (e) {
       $(e.target).closest('div').next().slideToggle(500);
       $(e.target).toggleClass('active');
+   });
+   $('.list-questions__item-row span:first-child').click(function (e) {
+      $(e.target).closest('div').next().slideToggle(500);
+      $(e.target).next().toggleClass('active');
    });
 
    //Стилизация Select

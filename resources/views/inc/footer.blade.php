@@ -5,7 +5,7 @@
          <a href="#">
             <img src="{{ asset('img/logo.jpg') }}" alt="">
          </a>
-         <div class="footer__text"><!--lang('footer.text')--></div>
+         <div class="footer__text">@lang('footer.text')</div>
       </div>
       <div class="footer__menu footer__row">
          <nav class="menu-footer">

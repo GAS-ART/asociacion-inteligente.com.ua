@@ -1,6 +1,6 @@
 <?php
 
    return [
-   'test' => 'Every work should be passionate and inspiring.',
+   'test' => 'Кожна робота повина мати пристрасть та надихати.',
    ];
 ?>
