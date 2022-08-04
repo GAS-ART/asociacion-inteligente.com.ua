@@ -961,7 +961,7 @@ body.lock {
   .questions__body {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: unset;
+    margin-left: 7px;
   }
 }
 .questions__text {
