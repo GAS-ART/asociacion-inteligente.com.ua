@@ -10,13 +10,13 @@
    margin-bottom: 30px;
    }
    @media (max-width: $mobileSmall) {
-      background-position-x: 50%;
+      background-position-x: 55%;
    }
    &__container {
       position: relative;
       padding-bottom: 26.042%;
       @media (max-width: $mobileSmall) {
-         padding-bottom: 60%;
+         padding-bottom: 75%;
       }
       &::before{
          content: '';
@@ -67,7 +67,7 @@
       //transform: translateY(0%);
       }
       @media (max-width: em(333)) {
-         top: 70%;
+         top: 80%;
       }
    }
 

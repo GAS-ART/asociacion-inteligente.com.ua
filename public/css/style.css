@@ -548,7 +548,7 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .baner {
-    background-position-x: 50%;
+    background-position-x: 55%;
   }
 }
 .baner__container {
@@ -557,7 +557,7 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .baner__container {
-    padding-bottom: 60%;
+    padding-bottom: 75%;
   }
 }
 .baner__container::before {
@@ -616,7 +616,7 @@ body.lock {
 }
 @media (max-width: 20.8125em) {
   .baner__body {
-    top: 70%;
+    top: 80%;
   }
 }
 .baner__title {
