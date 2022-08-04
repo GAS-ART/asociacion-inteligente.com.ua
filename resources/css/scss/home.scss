@@ -7,13 +7,16 @@
    background-repeat: no-repeat;
    margin-bottom: 100px;
    @media (max-width: $mobile) {
-   margin-bottom: 60px;
+   margin-bottom: 30px;
+   }
+   @media (max-width: $mobileSmall) {
+      background-position-x: 50%;
    }
    &__container {
       position: relative;
       padding-bottom: 26.042%;
       @media (max-width: $mobileSmall) {
-         padding-bottom: 30%;
+         padding-bottom: 60%;
       }
       &::before{
          content: '';
@@ -60,8 +63,11 @@
       }
       }
       @media (max-width: $mobileSmall) {
-      top: 0;
-      transform: translateY(0%);
+      top: 90%;
+      //transform: translateY(0%);
+      }
+      @media (max-width: em(333)) {
+         top: 70%;
       }
    }
 
@@ -94,7 +100,7 @@
       }
       @media (max-width: $mobileSmall) {
       position: absolute;
-      bottom: calc(-100% + 5px) ;
+      //bottom: 15%  ;
       }
    }
 
@@ -208,6 +214,7 @@
       @media (max-width: $mobile) {
          grid-template-columns:1fr;
          grid-template-rows: repeat(6, auto);
+         row-gap: 20px;
       }
    }
 
@@ -217,7 +224,7 @@
 .item-help {
    margin-bottom: 100px;
    @media (max-width: $mobile) {
-   margin-bottom: 60px;
+   margin-bottom: 20px;
    }
    &__img {
       position: relative;

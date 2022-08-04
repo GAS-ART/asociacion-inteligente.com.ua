@@ -543,7 +543,12 @@ body.lock {
 }
 @media (max-width: 47.99875em) {
   .baner {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .baner {
+    background-position-x: 50%;
   }
 }
 .baner__container {
@@ -552,7 +557,7 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .baner__container {
-    padding-bottom: 30%;
+    padding-bottom: 60%;
   }
 }
 .baner__container::before {
@@ -606,8 +611,12 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .baner__body {
-    top: 0;
-    transform: translateY(0%);
+    top: 90%;
+  }
+}
+@media (max-width: 20.8125em) {
+  .baner__body {
+    top: 70%;
   }
 }
 .baner__title {
@@ -660,7 +669,6 @@ body.lock {
 @media (max-width: 29.99875em) {
   .baner__donate {
     position: absolute;
-    bottom: calc(-100% + 5px);
   }
 }
 .baner__donate-button {
@@ -820,6 +828,7 @@ body.lock {
   .help__body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
+    row-gap: 20px;
   }
 }
 .item-help {
@@ -827,7 +836,7 @@ body.lock {
 }
 @media (max-width: 47.99875em) {
   .item-help {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 }
 .item-help__img {
