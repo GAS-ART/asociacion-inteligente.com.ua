@@ -1093,6 +1093,10 @@ body.lock {
   color: #4A4E57;
   line-height: 18px;
 }
+.list-questions__item-color {
+  color: #28478A;
+  font-weight: bold;
+}
 
 /*==========================QUESTIONS==========================*/
 /*==========================CHARITY==========================*/
