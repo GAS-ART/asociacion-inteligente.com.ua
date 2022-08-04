@@ -63,7 +63,7 @@
       }
       }
       @media (max-width: $mobileSmall) {
-      top: 90%;
+      top: 80%;
       //transform: translateY(0%);
       }
       @media (max-width: em(333)) {
@@ -80,9 +80,11 @@
       font-weight: 700;
       color: #fff;
      @include adaptiveValueREM('margin-bottom', 40,10,1200, 768, 1);
+     @include adaptiveValueREM('margin-left', 40,10,479, 320, 0);
    }
 
    &__donate {
+      @include adaptiveValueREM('margin-left', 40,10,479, 320, 0);
       img{
          display: inline-block;
          margin-right: 10px;

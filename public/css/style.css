@@ -611,7 +611,7 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .baner__body {
-    top: 90%;
+    top: 80%;
   }
 }
 @media (max-width: 20.8125em) {
@@ -645,6 +645,40 @@ body.lock {
     margin-bottom: calc(
          0.625rem + 1.875 * (100vw - 48rem) / 27
       );
+  }
+}
+@supports (margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem )) {
+  .baner__title {
+    margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem );
+  }
+}
+@supports not (margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem )) {
+  .baner__title {
+    margin-left: calc(
+         0.625rem + 1.875 * (100vw - 20rem) / 9.9375
+      );
+  }
+}
+@media (min-width: 29.9375em) {
+  .baner__title {
+    margin-left: inherit;
+  }
+}
+@supports (margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem )) {
+  .baner__donate {
+    margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem );
+  }
+}
+@supports not (margin-left: clamp( 0.625rem , -3.1485849057rem  +  18.8679245283vw , 2.5rem )) {
+  .baner__donate {
+    margin-left: calc(
+         0.625rem + 1.875 * (100vw - 20rem) / 9.9375
+      );
+  }
+}
+@media (min-width: 29.9375em) {
+  .baner__donate {
+    margin-left: inherit;
   }
 }
 .baner__donate img {
