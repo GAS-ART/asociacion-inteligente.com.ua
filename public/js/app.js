@@ -90,7 +90,7 @@ window.onload = function () {
     $(".popup__load").addClass('active');
     $.ajax({
       type: 'POST',
-      url: 'http://127.0.0.1:8000/feedback',
+      url: 'https://asociacion-inteligente.com.ua/',
       data: new FormData(this),
       contentType: false,
       cache: false,
