@@ -10,6 +10,7 @@
             <div class="popup__form">
                <div class="popup__title">
                   <h4>@lang('form.tittle')</h4>
+                  <p>@lang('form.title_text')</p>
                </div>
                <div class="popup__text">
                   <form class="form @lang('language.current_lang')" id="bookingform" name="popupform" method="POST"

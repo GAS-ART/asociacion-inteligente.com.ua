@@ -1357,6 +1357,7 @@ body.lock {
 .footer__text {
   color: #4A4E57;
   line-height: 1.5;
+  font-weight: bold;
 }
 @media (max-width: 61.99875em) {
   .footer__text {
@@ -1794,18 +1795,22 @@ body.lock {
 .popup__title {
   transition: all 1.2s ease 0s;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
 }
 @media (max-width: 47.99875em) {
   .popup__title {
     margin-bottom: 10px;
   }
 }
+.popup__title p {
+  font-weight: bold;
+}
 
 .popup__title h4 {
   color: #292929;
   font-weight: 800;
   line-height: 1.26;
+  margin-bottom: 10px;
 }
 @supports (font-size: clamp( 1.5rem , 0.9318181818rem  +  2.8409090909vw , 3.0625rem )) {
   .popup__title h4 {

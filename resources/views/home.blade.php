@@ -12,7 +12,7 @@
       <div class="baner__body">
          <h1 class="baner__title">@lang('home.baner.title')</h1>
          <div class="baner__donate">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZLZQZQZQZQZQS"
+         <!--https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZLZQZQZQZQZQS-->   <a href="#"
                class="baner__donate-button">
                <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
                <span>@lang('home.baner.paypal')</span>
