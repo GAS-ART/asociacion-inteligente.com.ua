@@ -80,7 +80,7 @@ window.onload = function () {
       $(".popup__load").addClass('active');
       $.ajax({
          type: 'POST',
-         url: 'https://asociacion-inteligente.com.ua/',
+         url: 'https://asociacion-inteligente.com.ua/feedback',
          data: new FormData(this),
          contentType: false,
          cache: false,
