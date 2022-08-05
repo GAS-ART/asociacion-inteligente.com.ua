@@ -124,7 +124,7 @@
    }
 }
 .popup__form {
-   padding: 12.5px 20px 10px 12.5px;
+   padding: 50px 40px 40px 40px;
    background-color: #ffffff;
    position: relative;
    display: flex;
@@ -207,17 +207,18 @@
 }
 .popup__title {
    transition: all 1.2s ease 0s;
-   text-align: center;
-   margin-bottom: 45px;
+   text-align: left;
+   margin-bottom: 75px;
    @media (max-width: $mobile) {
       margin-bottom: 10px;
    }
    p{
       font-weight: bold;
+      @include adaptiveValueREM('font-size', 20,16);
    }
 }
 .popup__title h4 {
-   @include adaptiveValueREM('font-size', 49,24);
+   @include adaptiveValueREM('font-size', 45,24);
    color: $title;
    font-weight: 800;
    line-height: 1.26;
