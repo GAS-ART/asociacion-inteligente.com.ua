@@ -155,4 +155,22 @@ window.onload = function () {
       });
    });
 
+   //Copy text to bufer
+   const text = document.querySelector('.copy-text').innerHTML;
+   const copyBtns = document.querySelectorAll('.copy-text');
+   const btnText = copyBtns[1].innerHTML;
+   copyBtns.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+         navigator.clipboard.writeText(text);
+         copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН";
+         copyBtns[0].classList.add('copied');
+         copyBtns[1].classList.add('copied');
+         setTimeout(() => {
+            copyBtns[1].innerHTML = btnText;
+            copyBtns[0].classList.remove('copied');
+            copyBtns[1].classList.remove('copied');
+         }, 15000);
+      });
+   });
+
 }

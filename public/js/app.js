@@ -115,15 +115,15 @@ window.onload = function () {
           var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er, _err$responseJSON3, _err$responseJSON3$er;
 
           if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.name) {
-            var text = err.responseJSON.errors.name[0];
+            var _text = err.responseJSON.errors.name[0];
 
-            if (text == 'Не заполнено поле "Имя"') {
+            if (_text == 'Не заполнено поле "Имя"') {
               $(".name-error").html('El campo Nombre no esta rellenado');
-            } else if (text == 'Поле "Имя" не должно содержать цифр') {
+            } else if (_text == 'Поле "Имя" не должно содержать цифр') {
               $(".name-error").html('Campo "Nombre" no puede contener los números');
-            } else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+            } else if (_text == 'Поле "Имя" должно содержать 2 или больше символов') {
               $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
-            } else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+            } else if (_text == 'Поле "Имя" должно содержать не больше 80 символов') {
               $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
             }
           } else {
@@ -131,11 +131,11 @@ window.onload = function () {
           }
 
           if (err !== null && err !== void 0 && (_err$responseJSON2 = err.responseJSON) !== null && _err$responseJSON2 !== void 0 && (_err$responseJSON2$er = _err$responseJSON2.errors) !== null && _err$responseJSON2$er !== void 0 && _err$responseJSON2$er.phone) {
-            var _text = err.responseJSON.errors.phone[0];
+            var _text2 = err.responseJSON.errors.phone[0];
 
-            if (_text == 'Не заполнено поле "Номер телефона"') {
+            if (_text2 == 'Не заполнено поле "Номер телефона"') {
               $(".phone-error").html('El campo no esta rellenado telefono');
-            } else if (_text == 'Не верный формат номера телефона') {
+            } else if (_text2 == 'Не верный формат номера телефона') {
               $(".phone-error").html('Introduce un telefono válido');
             }
           } else {
@@ -143,9 +143,9 @@ window.onload = function () {
           }
 
           if (err !== null && err !== void 0 && (_err$responseJSON3 = err.responseJSON) !== null && _err$responseJSON3 !== void 0 && (_err$responseJSON3$er = _err$responseJSON3.errors) !== null && _err$responseJSON3$er !== void 0 && _err$responseJSON3$er.service) {
-            var _text2 = err.responseJSON.errors.service[0];
+            var _text3 = err.responseJSON.errors.service[0];
 
-            if (_text2 == 'Пожалуйста выберете тип услуги из списка') {
+            if (_text3 == 'Пожалуйста выберете тип услуги из списка') {
               $(".service-error").html('Por favor, elige el servicio');
             }
           } else {
@@ -175,6 +175,23 @@ window.onload = function () {
         }
       }
     });
+  }); //Copy text to bufer
+
+  var text = document.querySelector('.copy-text').innerHTML;
+  var copyBtns = document.querySelectorAll('.copy-text');
+  var btnText = copyBtns[1].innerHTML;
+  copyBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      navigator.clipboard.writeText(text);
+      copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН";
+      copyBtns[0].classList.add('copied');
+      copyBtns[1].classList.add('copied');
+      setTimeout(function () {
+        copyBtns[1].innerHTML = btnText;
+        copyBtns[0].classList.remove('copied');
+        copyBtns[1].classList.remove('copied');
+      }, 15000);
+    });
   });
 };
 
@@ -195,7 +212,7 @@ function popUp(popupId) {
   var bodyLock = document.getElementById('body');
   var popupCloseIcon = popUp.querySelector('.close-popup');
   var popupBtn = popUp.querySelector('.confirm-button');
-  var popupSending = popUp.querySelector('.popup__load');
+  var popupSending = popUp.querySelector('.popup__load') || false;
   var filePreview = popUp.querySelector('.preview-file') || false;
   popUp.classList.add('open');
   bodyLock.classList.add('lock');
@@ -218,8 +235,10 @@ function popUp(popupId) {
   }
 
   popUp.addEventListener('mousedown', function (e) {
-    if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
-      popupClose(popUp);
+    if (popupSending) {
+      if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) popupClose(popUp);
+    } else {
+      if (!e.target.closest('.popup__content')) popupClose(popUp);
     }
   });
 }

@@ -59,3 +59,46 @@
       </div>
    </div>
 </div>
+
+<div id="pay" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close close-popup"><span></span><span></span></a>
+         <div class="popup__row">
+            <div class="popup__form">
+               <div class="popup__title">
+                  <h4>@lang('form.pay.title')</h4>
+               </div>
+               <div class="popup__text">
+                  <div class="popup__pay-way popup__paypal">
+                     <div class="popup__pay-img">
+                        <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
+                     </div>
+                     <div class="popup__pay-text">PayPal</div>
+                     <div></div>
+                  </div>
+                  <div class="popup__pay-way popup__card">
+                     <div class="popup__pay-img">
+                        <img src="{{ asset('img/icons/card.jpg') }}" alt="">
+                     </div>
+                     <div class="popup__pay-text">Credit Card</div>
+                     <div></div>
+                  </div>
+                  <p class="popup__tesxt-aditional">@lang('form.pay.title_text')</p>
+                  <div class="popup__bank">@lang('form.pay.bank')</div>
+                  <div class="popup__copy-btn copy-text">Скопировать счет
+                  </div>
+               </div>
+               <div class="confirm">
+                  <p>@lang('form.success')</p>
+                  <div class="confirm-button">
+                     ОК
+                  </div>
+               </div>
+            </div>
+            <button class="popup__image popup__pay">
+            </button>
+         </div>
+      </div>
+   </div>
+</div>

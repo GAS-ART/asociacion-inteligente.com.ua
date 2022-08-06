@@ -3,7 +3,7 @@ export function popUp(popupId) {
 	const bodyLock = document.getElementById('body');
 	const popupCloseIcon = popUp.querySelector('.close-popup');
 	const popupBtn = popUp.querySelector('.confirm-button');
-	const popupSending = popUp.querySelector('.popup__load');
+	const popupSending = popUp.querySelector('.popup__load') || false;
 	const filePreview = popUp.querySelector('.preview-file') || false;
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
@@ -27,8 +27,10 @@ export function popUp(popupId) {
 	}
 
 	popUp.addEventListener('mousedown', function (e) {
-		if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
-			popupClose(popUp);
+		if (popupSending) {
+			if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) popupClose(popUp);
+		} else {
+			if (!e.target.closest('.popup__content')) popupClose(popUp);
 		}
 	});
 };

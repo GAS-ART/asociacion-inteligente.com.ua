@@ -1352,12 +1352,13 @@ body.lock {
 }
 .footer__logo a {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .footer__text {
   color: #4A4E57;
   line-height: 1.5;
   font-weight: bold;
+  font-size: 14px;
 }
 @media (max-width: 61.99875em) {
   .footer__text {
@@ -1670,6 +1671,11 @@ body.lock {
   }
 }
 
+#pay .popup__form {
+  width: unset;
+  max-width: 550px;
+}
+
 .contacts-form__item {
   margin-bottom: 10px;
 }
@@ -1833,6 +1839,22 @@ body.lock {
   .popup__title h4 {
     font-size: calc(
          1.5rem + 1.3125 * (100vw - 20rem) / 55
+      );
+  }
+}
+
+#pay .popup__title {
+  margin-bottom: 30px;
+}
+@supports (font-size: clamp( 1.5rem , 1.1363636364rem  +  1.8181818182vw , 2.5rem )) {
+  #pay .popup__title h4 {
+    font-size: clamp( 1.5rem , 1.1363636364rem  +  1.8181818182vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.5rem , 1.1363636364rem  +  1.8181818182vw , 2.5rem )) {
+  #pay .popup__title h4 {
+    font-size: calc(
+         1.5rem + 1 * (100vw - 20rem) / 55
       );
   }
 }
@@ -2031,11 +2053,14 @@ body.lock {
 }
 .popup__image {
   position: relative;
-  width: 300px;
-  flex: 0 0 300px;
+  width: 400px;
+  flex: 0 0 400px;
   background-image: url("/img/popup.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.popup__image.popup__pay {
+  background-image: url("/img/popup_pay.jpg");
 }
 @media (max-width: 61.99875em) {
   .popup__image {
@@ -2211,30 +2236,101 @@ body.lock {
   width: 5px;
 }
 
-#moonstersJump .case-popup-works__items:last-child,
-#floaretelie .case-popup-works__items:last-child {
-  grid-template-columns: repeat(4, auto);
-}
-@media (max-width: 47.99875em) {
-  #moonstersJump .case-popup-works__items,
-#floaretelie .case-popup-works__items {
-    grid-template-columns: auto !important;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-}
-
-#floaretelie .case-popup__links {
+#pay .popup__text {
   flex-direction: column;
+  width: 100%;
 }
-#floaretelie .case-popup__links .case-popup__links-row:not(:last-child) {
-  margin-bottom: 15px;
+#pay .popup__pay-way {
+  position: relative;
+  width: 100%;
+  padding: 15px 0 15px 0px;
+  background-color: #28478A;
+  color: #ffffff;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 29.99875em) {
-  #floaretelie .case-popup__links .case-popup__links-row:not(:last-child) {
-    margin-bottom: 10px;
+#pay .popup__pay-way:not(:last-child) {
+  margin-bottom: 20px;
+}
+#pay .popup__pay-img {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pay .popup__pay-img img {
+  position: relative;
+  width: 15.3px;
+  height: 18px;
+}
+#pay .popup__card img {
+  width: 18px;
+}
+#pay .popup__tesxt-aditional {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@supports (font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
+  #pay .popup__tesxt-aditional {
+    font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem );
   }
+}
+@supports not (font-size: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
+  #pay .popup__tesxt-aditional {
+    font-size: calc(
+         1.125rem + 0.375 * (100vw - 20rem) / 55
+      );
+  }
+}
+#pay .popup__bank {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+@supports (font-size: clamp( 1.375rem , 1.2386363636rem  +  0.6818181818vw , 1.75rem )) {
+  #pay .popup__bank {
+    font-size: clamp( 1.375rem , 1.2386363636rem  +  0.6818181818vw , 1.75rem );
+  }
+}
+@supports not (font-size: clamp( 1.375rem , 1.2386363636rem  +  0.6818181818vw , 1.75rem )) {
+  #pay .popup__bank {
+    font-size: calc(
+         1.375rem + 0.375 * (100vw - 20rem) / 55
+      );
+  }
+}
+#pay .popup__bank span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 900;
+  transition: background-color 0.3s ease 0s;
+}
+#pay .popup__bank span.copied {
+  background-color: #16cf0f;
+}
+#pay .popup__copy-btn {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  background-color: #28478A;
+  padding: 10px 20px;
+  color: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+#pay .popup__copy-btn.copied {
+  background-color: #16cf0f;
 }
 
 .page-404 {

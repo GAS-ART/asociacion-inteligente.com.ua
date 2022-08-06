@@ -136,6 +136,12 @@
       order: 2;
    }
 }
+#pay{
+   .popup__form {
+      width: unset;
+      max-width: 550px;
+   }
+}
 .contacts-form__item {
    input {
       @include adaptiveValueREM("width", 450, 260);
@@ -224,6 +230,16 @@
    line-height: 1.26;
    margin-bottom: 10px;
 }
+
+#pay{
+   .popup__title{
+      margin-bottom: 30px;
+   }
+   .popup__title h4 {
+      @include adaptiveValueREM('font-size', 40,24);
+   }
+}
+
 .popup__text {
    transition: all 1.2s ease 0s;
    display: flex;
@@ -424,11 +440,14 @@
 
 .popup__image {
    position: relative;
-   width: 300px;
-   flex: 0 0 300px;
+   width: 400px;
+   flex: 0 0 400px;
    background-image: url("/img/popup.jpg");
    background-repeat: no-repeat;
    background-size: cover;
+   &.popup__pay{
+      background-image: url("/img/popup_pay.jpg");
+   }
    @media (max-width: $tablet) {
       width: 100%;
       flex: 1 1 210px;
@@ -598,32 +617,80 @@
    }
 }
 
-#moonstersJump,
-#floaretelie {
-   .case-popup-works__items {
-      &:last-child {
-         grid-template-columns: repeat(4, auto);
-      }
-      @media (max-width: $mobile) {
-         grid-template-columns: auto !important;
-         gap: 10px;
-         align-items: flex-start;
-         justify-content: flex-start;
+#pay{
+   .popup__text {
+      flex-direction: column;
+      width: 100%;
+   }
+   .popup__pay-way{
+      position: relative;
+      width: 100%;
+      padding: 15px 0 15px 0px;
+      background-color: $blue;
+      color: #ffffff;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child){
+         margin-bottom: 20px;
       }
    }
-}
-#floaretelie {
-   .case-popup__links {
-      flex-direction: column;
-      .case-popup__links-row {
-         &:not(:last-child) {
-            margin-bottom: 15px;
+   .popup__pay-img{
+      position: absolute;
+      left: 40px;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+         position: relative;
+         width: 15.3px;
+         height: 18px;
+      }
+   }
+   .popup__card{
+      img{
+         width: 18px;
+      }
+   }
+   .popup__tesxt-aditional{
+      text-align: center;
+      @include adaptiveValueREM('font-size', 24,18);
+      font-weight: bold;
+      margin-bottom: 20px;
+      
+   }
+   .popup__bank{
+      text-align: center;
+      text-transform: uppercase;
+      @include adaptiveValueREM('font-size', 28,22);
+      margin-bottom: 10px;
+      span{
+         display: block;
+         margin-top: 10px;
+         font-weight: 900;
+         transition: background-color 0.3s ease 0s;
+         &.copied{
+            background-color: #16cf0f;
          }
-         @media (max-width: $mobileSmall) {
-            &:not(:last-child) {
-               margin-bottom: 10px;
-            }
-         }
+      }
+   }
+   .popup__copy-btn{
+      width: min-content;
+      margin: 0 auto;
+      background-color: $blue;
+      padding: 10px 20px;
+      color: #ffffff;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background-color 0.3s ease 0s;
+      &.copied{
+         background-color: #16cf0f;
       }
    }
 }
