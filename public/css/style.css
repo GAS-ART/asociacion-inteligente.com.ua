@@ -432,7 +432,25 @@ body.lock {
     grid-template-rows: repeat(6, 35px);
   }
 }
-.menu__item:last-child a:not(:last-child) {
+.menu__item:last-child {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+@media (max-width: 47.99875em) {
+  .menu__item:last-child {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    width: unset;
+    height: unset;
+    pointer-events: all;
+  }
+}
+.menu__item:last-child .menu__link:not(:last-child) {
   margin-right: 20px;
 }
 .menu__link {

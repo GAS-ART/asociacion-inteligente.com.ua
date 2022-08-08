@@ -52,7 +52,7 @@
                            </svg>
                         </a>
                         <a href="https://www.instagram.com/inteli.gente.ua/" class="menu__link">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102">
                               <defs>
                                  <radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse">
                                     <stop offset=".09" stop-color="#fa8f21" />

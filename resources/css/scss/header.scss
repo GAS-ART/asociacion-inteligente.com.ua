@@ -159,7 +159,22 @@ background-color: #fff;
 
 	&__item {
 		&:last-child{
-			a{
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			width: 0;
+			height: 0;
+			pointer-events: none;
+			@media (max-width: $mobile) {
+				opacity: 1;
+				visibility: visible;
+				position: relative;
+				width: unset;
+				height: unset;
+				pointer-events: all;
+			}
+			.menu__link{
+				//display: none;
 				&:not(:last-child){
 					margin-right: 20px;
 				}
