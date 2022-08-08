@@ -623,6 +623,19 @@ body.lock {
     top: 80%;
   }
 }
+.baner__social {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+}
+.baner__facebook {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.baner__instagram {
+  cursor: pointer;
+}
 .baner__title {
   font-weight: 700;
   color: #fff;
@@ -1359,6 +1372,7 @@ body.lock {
   line-height: 1.5;
   font-weight: bold;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 @media (max-width: 61.99875em) {
   .footer__text {
@@ -1370,6 +1384,12 @@ body.lock {
   .footer__text {
     text-align: left;
   }
+}
+.footer__social {
+  display: flex;
+}
+.footer__facebook {
+  margin-right: 20px;
 }
 .menu-footer__item:not(:last-child) {
   margin-bottom: 7px;

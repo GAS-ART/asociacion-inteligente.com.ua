@@ -74,6 +74,25 @@
       }
    }
 
+
+	&__social {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+	}
+
+	&__facebook {
+      margin-right: 15px;
+      cursor: pointer;
+	}
+
+	&__instagram {
+      cursor: pointer;
+	}
+
+
+
    &__items{
       
    }
