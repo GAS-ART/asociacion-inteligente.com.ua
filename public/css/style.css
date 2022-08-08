@@ -432,6 +432,9 @@ body.lock {
     grid-template-rows: repeat(6, 35px);
   }
 }
+.menu__item:last-child a:not(:last-child) {
+  margin-right: 20px;
+}
 .menu__link {
   font-size: 0.9375rem;
   font-weight: 500;
@@ -628,6 +631,11 @@ body.lock {
   bottom: 20px;
   right: 20px;
   display: flex;
+}
+@media (max-width: 47.99875em) {
+  .baner__social {
+    display: none;
+  }
 }
 .baner__facebook {
   margin-right: 15px;

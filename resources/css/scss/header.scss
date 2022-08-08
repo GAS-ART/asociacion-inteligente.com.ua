@@ -154,9 +154,17 @@ background-color: #fff;
 			grid-template-columns: auto;
 			grid-template-rows: repeat(6, 35px);
 		}
+		
 	}
 
 	&__item {
+		&:last-child{
+			a{
+				&:not(:last-child){
+					margin-right: 20px;
+				}
+			}
+		}
 	}
 
 	&__link {

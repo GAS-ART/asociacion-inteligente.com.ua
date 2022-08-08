@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=9' }}"> 
+   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=10' }}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
