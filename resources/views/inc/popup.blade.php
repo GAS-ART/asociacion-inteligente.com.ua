@@ -71,6 +71,8 @@
                </div>
                <div class="popup__text">
                   <div class="popup__pay-way popup__paypal">
+                     <a target="_blank" class="popup__pay-way-link"
+                        href="https://www.sandbox.paypal.com/donate/?hosted_button_id=E62LK6H8NWVM8"></a>
                      <div class="popup__pay-img">
                         <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
                      </div>

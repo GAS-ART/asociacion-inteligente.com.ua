@@ -751,6 +751,7 @@ body.lock {
 .baner__donate-button {
   padding: 10px 25px;
   background-color: #fff;
+  position: relative;
 }
 .baner__donate-button:not(:last-child) {
   margin-right: 20px;
@@ -1547,16 +1548,18 @@ body.lock {
   white-space: nowrap;
   margin-bottom: 15px;
 }
-.donate-footer__item {
+.donate-footer__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.donate-footer__link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10px;
 }
 .donate-footer__img {
   margin-right: 10px;
 }
-.donate-footer__link {
+.donate-footer__text {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
@@ -2377,6 +2380,13 @@ body.lock {
 }
 #pay .popup__copy-btn.copied {
   background-color: #16cf0f;
+}
+#pay .popup__pay-way-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .page-404 {

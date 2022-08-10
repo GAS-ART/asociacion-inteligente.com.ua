@@ -86,15 +86,15 @@
             @lang('footer.contacts.address')
          </div>
          <div class="contacts-footer__phone">
-         <div class="contacts-footer__phone-item">
-            <a href="tel:%2B380698560864">@lang('footer.contacts.phone')</a>
-           <a href="tel:%2B380698560864">@lang('footer.contacts.phone_1')</a>
-            @lang('footer.contacts.phone_2')</a>
-         <div class="contacts-footer__email">
-            @lang('footer.contacts.email')</a>
+            <div class="contacts-footer__phone-item">
+               <a href="tel:%2B380698560864">@lang('footer.contacts.phone')</a>
+               <a href="tel:%2B380698560864">@lang('footer.contacts.phone_1')</a>
+               @lang('footer.contacts.phone_2')</a>
+               <div class="contacts-footer__email">
+                  @lang('footer.contacts.email')</a>
+               </div>
             </div>
          </div>
-      </div>
       </div>
       <div class="footer__donate donate-footer footer__row">
          <div class="donate-footer__title">
@@ -102,10 +102,13 @@
          </div>
          <ul class="donate-footer__list">
             <li class="donate-footer__item">
-               <div class="donate-footer__img">
-                  <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
-               </div>
-               <a href="#" class="donate-footer__link">@lang('footer.donate.paypal')</a>
+               <a class="donate-footer__link" target="_blank"
+                  href="https://www.sandbox.paypal.com/donate/?hosted_button_id=E62LK6H8NWVM8">
+                  <div class="donate-footer__img">
+                     <img src="{{ asset('img/icons/paypal.jpg') }}" alt="">
+                  </div>
+                  <div class="donate-footer__text">@lang('footer.donate.paypal')</div>
+               </a>
             </li>
             <!--<li class="donate-footer__item">
                <div class="donate-footer__img">
@@ -114,10 +117,12 @@
                <a href="#" class="donate-footer__link">@lang('footer.donate.crypto')</a>
             </li> -->
             <li class="donate-footer__item">
-               <div class="donate-footer__img">
-                  <img src="{{ asset('img/icons/card.jpg') }}" alt="">
-               </div>
-               <a href="#" class="donate-footer__link">@lang('footer.donate.card')</a>
+               <a class="donate-footer__link" href="#">
+                  <div class="donate-footer__img">
+                     <img src="{{ asset('img/icons/card.jpg') }}" alt="">
+                  </div>
+                  <div class="donate-footer__text">@lang('footer.donate.card')</div>
+               </a>
             </li>
          </ul>
       </div>

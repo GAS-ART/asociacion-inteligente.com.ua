@@ -135,6 +135,7 @@
    &__donate-button {
       padding: 10px 25px;
       background-color: #fff;
+      position: relative;
       &:not(:last-child){
          margin-right: 20px;
       }

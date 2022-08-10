@@ -13,7 +13,7 @@
    ],
    'contacts' => 
    [
-      'address' => '<p>Адрес</p><p>С/Puigcugul 48 Cassa de la Selva 17244 Girona</p>',
+      'address' => '<p>Адрес</p><p>Calle Castellón de la Plana 3,Girona 17005</p>',
       'phone' => '<p>Телефон</p><a href="tel:%2B34698560864">+34 698 560 864</a>',
       'phone_1' => '<a href="tel:%2B34664895661">+34 664 895 661</a>',
       'phone_2' => '<a href="tel:%2B34717194632">+34 717 194 632</a>',
