@@ -22,7 +22,7 @@
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="https://buy.stripe.com/fZe4hAfDr8lA9Pi001" class="menu__link">
                            @lang('header.menu.poster')
                         </a>
                      </li>
@@ -37,7 +37,7 @@
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="{{ route('contacts.lang', ['locale' => __('language.current_lang')]) }}" class="menu__link">
                            @lang('header.menu.contact')
                         </a>
                      </li>

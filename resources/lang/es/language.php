@@ -1,7 +1,7 @@
 <?php
 
    return [ 
-   'current_lang' => 'ru',
-   'set_lang' => 'es',
+   'current_lang' => 'es',
+   'set_lang' => 'ru',
    ];
 ?>

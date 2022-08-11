@@ -39,3 +39,23 @@ Route::get('/{locale}', function ($locale) {
  
   }
  })->name('home.lang');
+
+ Route::get('/{locale}/contacts', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('contacts');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('contacts');
+
+ }
+})->name('contacts.lang');
