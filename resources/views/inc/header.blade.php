@@ -22,7 +22,7 @@
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="https://buy.stripe.com/fZe4hAfDr8lA9Pi001" class="menu__link">
+                        <a href="#" class="menu__link">
                            @lang('header.menu.poster')
                         </a>
                      </li>
