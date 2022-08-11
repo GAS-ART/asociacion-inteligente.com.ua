@@ -660,7 +660,7 @@
    }
    .popup__tesxt-aditional{
       text-align: center;
-      @include adaptiveValueREM('font-size', 24,18);
+      @include adaptiveValueREM('font-size', 22,18);
       font-weight: bold;
       margin-bottom: 20px;
       
@@ -668,7 +668,7 @@
    .popup__bank{
       text-align: center;
       text-transform: uppercase;
-      @include adaptiveValueREM('font-size', 28,22);
+      @include adaptiveValueREM('font-size', 22,18);
       margin-bottom: 10px;
       span{
          display: block;
