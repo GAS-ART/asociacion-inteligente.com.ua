@@ -116,8 +116,8 @@
                </div>
                <a href="#" class="donate-footer__link">@lang('footer.donate.crypto')</a>
             </li> -->
-            <li class="donate-footer__item">
-               <a class="donate-footer__link" href="#">
+            <li target="_blank" class="donate-footer__item">
+               <a  class="donate-footer__link" href="https://buy.stripe.com/5kAcO63UJdFUf9C5kk">
                   <div class="donate-footer__img">
                      <img src="{{ asset('img/icons/card.jpg') }}" alt="">
                   </div>

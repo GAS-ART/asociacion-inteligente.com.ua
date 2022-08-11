@@ -23,7 +23,7 @@
                <img src="{{ asset('img/icons/bitcoin.jpg') }}" alt="">
                <span>@lang('home.baner.crypto')</span>
             </a> -->
-            <a href="#" class="baner__donate-button">
+            <a target="_blank" href="https://buy.stripe.com/5kAcO63UJdFUf9C5kk" class="baner__donate-button">
                <img src="{{ asset('img/icons/card.jpg') }}" alt="">
                <span>@lang('home.baner.card')</span>
             </a>

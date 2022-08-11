@@ -80,6 +80,8 @@
                      <div></div>
                   </div>
                   <div class="popup__pay-way popup__card">
+                  <a target="_blank" class="popup__pay-way-link"
+                        href="https://buy.stripe.com/5kAcO63UJdFUf9C5kk"></a>
                      <div class="popup__pay-img">
                         <img src="{{ asset('img/icons/card.jpg') }}" alt="">
                      </div>
