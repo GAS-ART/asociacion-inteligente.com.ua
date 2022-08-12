@@ -26,5 +26,9 @@
       'crypto' => 'Crypto',
       'card' => 'Credit Card',
    ],
+   'copiright' => [
+      'developed' => '2022 Создано агентством <a target="_blank" href="https://colorit.agency/ru">Colorit agency</a>',
+      'rights' => '© Все права защищены. Частичное или полное копирование сайта возможно только с разрешением.',
+   ],
 ]
 ?>

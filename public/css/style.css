@@ -1395,19 +1395,20 @@ body.lock {
 .footer {
   padding: 20px 0;
 }
-.footer__container {
+.footer__body {
   display: grid;
   grid-template-columns: minmax(140px, 300px) -webkit-min-content minmax(-webkit-min-content, 200px) -webkit-min-content;
   grid-template-columns: minmax(140px, 300px) min-content minmax(min-content, 200px) min-content;
+  margin-bottom: 30px;
 }
 @supports ((-moz-column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem )) or (column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem ))) {
-  .footer__container {
+  .footer__body {
     -moz-column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem );
          column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem );
   }
 }
 @supports not ((-moz-column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem )) or (column-gap: clamp( 4.0625rem , -16.8028846154rem  +  33.6538461538vw , 8.4375rem ))) {
-  .footer__container {
+  .footer__body {
     -moz-column-gap: calc(
          4.0625rem + 4.375 * (100vw - 62rem) / 13
       );
@@ -1417,14 +1418,14 @@ body.lock {
   }
 }
 @media (max-width: 61.99875em) {
-  .footer__container {
+  .footer__body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     row-gap: 25px;
   }
 }
 @media (max-width: 29.99875em) {
-  .footer__container {
+  .footer__body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
   }
@@ -1469,6 +1470,16 @@ body.lock {
 }
 .footer__facebook {
   margin-right: 20px;
+}
+.footer__copiright {
+  text-align: right;
+  font-size: 14px;
+}
+.footer__developed {
+  margin-bottom: 10px;
+}
+.footer__developed a {
+  font-weight: bold;
 }
 .menu-footer__item:not(:last-child) {
   margin-bottom: 7px;
