@@ -65,6 +65,7 @@ window.onload = function () {
 
    //Стилизация Select
    const bookingForm = document.querySelector('#bookingform');
+   const questionForm = document.querySelector('#questionForm');
    let placeholderText = 'Вид помощи';
    if (bookingForm.classList.contains('es')) {
       placeholderText = 'Elige el servicio';
@@ -169,12 +170,12 @@ window.onload = function () {
             $(".name-error").html('');
             $(".phone-error").html('');
             //$(".popup").addClass("send");
-            bookingForm.reset();
+            questionForm.reset();
             //$(".popup__load").removeClass('active');
          },
          error: function (err) {
             //$(".popup__load").removeClass('active');
-            if (bookingForm.classList.contains('es')) {
+            if (questionForm.classList.contains('es')) {
                if (err?.responseJSON?.errors?.name) {
                   let text = err.responseJSON.errors.name[0]
                   if (text == 'Не заполнено поле "Имя"') {

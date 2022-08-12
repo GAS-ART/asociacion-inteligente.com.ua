@@ -67,7 +67,7 @@
             </ul>
          </div>
          <div class="question__form form-question">
-            <form id="questionForm" name="question-form" method="POST" class="form-question__form" action="#"
+            <form id="questionForm" name="question-form" method="POST" class="form-question__form @lang('language.current_lang')" action="#"
                autocomplete="on">
                @csrf
                <div class="form-question__contacts">

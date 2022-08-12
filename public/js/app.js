@@ -74,6 +74,7 @@ window.onload = function () {
   }); //Стилизация Select
 
   var bookingForm = document.querySelector('#bookingform');
+  var questionForm = document.querySelector('#questionForm');
   var placeholderText = 'Вид помощи';
 
   if (bookingForm.classList.contains('es')) {
@@ -190,11 +191,11 @@ window.onload = function () {
         $(".name-error").html('');
         $(".phone-error").html(''); //$(".popup").addClass("send");
 
-        bookingForm.reset(); //$(".popup__load").removeClass('active');
+        questionForm.reset(); //$(".popup__load").removeClass('active');
       },
       error: function error(err) {
         //$(".popup__load").removeClass('active');
-        if (bookingForm.classList.contains('es')) {
+        if (questionForm.classList.contains('es')) {
           var _err$responseJSON7, _err$responseJSON7$er, _err$responseJSON8, _err$responseJSON8$er;
 
           if (err !== null && err !== void 0 && (_err$responseJSON7 = err.responseJSON) !== null && _err$responseJSON7 !== void 0 && (_err$responseJSON7$er = _err$responseJSON7.errors) !== null && _err$responseJSON7$er !== void 0 && _err$responseJSON7$er.name) {
