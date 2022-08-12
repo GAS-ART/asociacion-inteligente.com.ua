@@ -155,6 +155,68 @@ window.onload = function () {
       });
    });
 
+   $("#questionForm").submit(function (event) {
+      event.preventDefault();
+      //$(".popup__load").addClass('active');
+      $.ajax({
+         type: 'POST',
+         url: 'https://asociacion-inteligente.com.ua/feedback-question',
+         data: new FormData(this),
+         contentType: false,
+         cache: false,
+         processData: false,
+         success: function () {
+            $(".name-error").html('');
+            $(".phone-error").html('');
+            //$(".popup").addClass("send");
+            bookingForm.reset();
+            //$(".popup__load").removeClass('active');
+         },
+         error: function (err) {
+            //$(".popup__load").removeClass('active');
+            if (bookingForm.classList.contains('es')) {
+               if (err?.responseJSON?.errors?.name) {
+                  let text = err.responseJSON.errors.name[0]
+                  if (text == 'Не заполнено поле "Имя"') {
+                     $(".name-error").html('El campo Nombre no esta rellenado');
+                  } else if (text == 'Поле "Имя" не должно содержать цифр') {
+                     $(".name-error").html('Campo "Nombre" no puede contener los números');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+                     $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+                     $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+                  }
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  let text = err.responseJSON.errors.phone[0]
+                  if (text == 'Не заполнено поле "Номер телефона"') {
+                     $(".phone-error").html('El campo no esta rellenado telefono');
+                  } else if (text == 'Не верный формат номера телефона') {
+                     $(".phone-error").html('Introduce un telefono válido');
+                  }
+               } else {
+                  $(".phone-error").html('');
+               }
+            } else {
+               if (err?.responseJSON?.errors?.name) {
+                  $(".name-error").html(err.responseJSON.errors.name[0]);
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  $(".phone-error").html(err.responseJSON.errors.phone[0]);
+               } else {
+                  $(".phone-error").html('');;
+               }
+            }
+         }
+      });
+   });
+
    //Copy text to bufer
    const text = document.querySelector('.copy-text').innerHTML;
    const copyBtns = document.querySelectorAll('.copy-text');

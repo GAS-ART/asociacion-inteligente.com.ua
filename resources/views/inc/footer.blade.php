@@ -74,7 +74,7 @@
                   </a>
                </li>
                <li class="menu-footer__item">
-                  <a href="#" class="menu-footer__link">
+                  <a href="{{ route('contacts.lang', ['locale' => __('language.current_lang')]) }}" class="menu-footer__link">
                      @lang('footer.menu.contact')
                   </a>
                </li>

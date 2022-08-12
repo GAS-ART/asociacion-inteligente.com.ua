@@ -1,0 +1,162 @@
+/*==========================BANER==========================*/
+.contacts-baner {
+   position: relative;
+ margin-top: 60px;
+ background: linear-gradient(86.4deg, rgba(41, 41, 41, 0.5) 0.66%, rgba(41, 41, 41, 0) 82.38%), url('/img/contacts/young-woman-with-flag-ukraine-background-sea.jpg'), #FBFCF6;
+ background-size: cover;
+ background-repeat: no-repeat;
+ margin-bottom: 100px;
+ @media (max-width: em(1200)) {
+   background-position-x: 55%;
+ }
+
+ @media (max-width: $mobile) {
+ margin-bottom: 30px;
+ background-position-x: 70%;
+ }
+
+   &__container {
+      padding-bottom: 15.72%;
+   }
+
+   &__body{
+      position: relative;
+      @include adaptiveValueREM('top', 150, 50, 1920, 768, 1);
+   }
+
+   &__title {
+      font-weight: 800;
+      @include adaptiveValueREM('font-size', 50, 22);
+      line-height: 126%;
+      color: #fff;
+      margin-bottom: em(20, 50);
+   }
+
+   &__text {
+      max-width: 760px;
+      line-height: 180%;
+      color: #fff;
+      
+      @media (max-width: em(1200)) {
+         @include adaptiveValueREM('padding-right', 100, 300, 1200, 768, 1);
+      }
+      @media (max-width: $mobile) {
+         padding-right: unset;
+      }
+   }
+}
+/*==========================BANER==========================*/
+
+/*==========================QUESTION==========================*/
+.question {
+   margin-bottom: 50px;
+   @media (max-width: $mobile) {
+      margin-bottom: 30px;
+   }
+   &__container {
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: 200px 120px 580px;
+      @include adaptiveValueREM('gap', 150, 25, 1230, 992, 1);
+      @media (max-width: $tablet) {
+         grid-template-columns: minmax(200px, 1fr)  minmax(120px, 1fr);
+         grid-template-rows: 1fr 1fr;
+      }
+      @media (max-width: $mobileSmall) {
+         grid-template-columns: minmax(120px, 1fr);
+         grid-template-rows: repeat(3, min-content);
+         gap: 20px;
+      }
+   }
+
+   &__form {
+      @media (max-width: $tablet) {
+         grid-column: span 2;
+      }
+      @media (max-width: $mobileSmall) {
+         grid-column: span 1;
+      }
+   }
+}
+.form-question {
+
+   &__form {
+     
+   }
+
+   &__contacts {
+      display: flex;
+      @media (max-width: em(605)) {
+      flex-direction: column;
+      }
+   }
+
+   &__text {
+      width: 100%;
+      height: 100px;
+      background: #FFFFFF;
+      border: 1px solid #232322;
+      font-family: 'Muller';
+      font-style: italic;
+      font-size: 14px;
+      line-height: 180%;
+      resize: none;
+      padding-left: 20px;
+      margin-bottom: 12px;
+   }
+}
+.question-form {
+
+   &__item {
+      height: min-content;
+   }
+
+   &__text-field {
+      width: 280px;
+      margin-right: 15px;
+      height: 50px;
+      background: #FFFFFF;
+      border: 1px solid #232322;
+      font-family: 'Muller';
+      font-style: italic;
+      font-size: 14px;
+      line-height: 180%;
+      padding-left: 20px;
+      @media (max-width: $mobileSmall) {
+      margin-right: unset;
+      margin-bottom: 15px;
+      width: 100%;
+      }
+   }
+
+   &__phone {
+      width: 280px;
+      height: 50px;
+      background: #FFFFFF;
+      border: 1px solid #232322;
+      font-family: 'Muller';
+      font-style: italic;
+      font-size: 14px;
+      line-height: 180%;
+      padding-left: 20px;
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 15px;
+         width: 100%;
+      }
+   }
+}
+.name-error {
+}
+.error {
+}
+.popup {
+
+   &__button-form {
+   }
+}
+.submit {
+}
+/*==========================QUESTION==========================*/
+

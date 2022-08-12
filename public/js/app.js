@@ -175,6 +175,73 @@ window.onload = function () {
         }
       }
     });
+  });
+  $("#questionForm").submit(function (event) {
+    event.preventDefault(); //$(".popup__load").addClass('active');
+
+    $.ajax({
+      type: 'POST',
+      url: 'https://asociacion-inteligente.com.ua/feedback-question',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function success() {
+        $(".name-error").html('');
+        $(".phone-error").html(''); //$(".popup").addClass("send");
+
+        bookingForm.reset(); //$(".popup__load").removeClass('active');
+      },
+      error: function error(err) {
+        //$(".popup__load").removeClass('active');
+        if (bookingForm.classList.contains('es')) {
+          var _err$responseJSON7, _err$responseJSON7$er, _err$responseJSON8, _err$responseJSON8$er;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON7 = err.responseJSON) !== null && _err$responseJSON7 !== void 0 && (_err$responseJSON7$er = _err$responseJSON7.errors) !== null && _err$responseJSON7$er !== void 0 && _err$responseJSON7$er.name) {
+            var _text4 = err.responseJSON.errors.name[0];
+
+            if (_text4 == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('El campo Nombre no esta rellenado');
+            } else if (_text4 == 'Поле "Имя" не должно содержать цифр') {
+              $(".name-error").html('Campo "Nombre" no puede contener los números');
+            } else if (_text4 == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+            } else if (_text4 == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON8 = err.responseJSON) !== null && _err$responseJSON8 !== void 0 && (_err$responseJSON8$er = _err$responseJSON8.errors) !== null && _err$responseJSON8$er !== void 0 && _err$responseJSON8$er.phone) {
+            var _text5 = err.responseJSON.errors.phone[0];
+
+            if (_text5 == 'Не заполнено поле "Номер телефона"') {
+              $(".phone-error").html('El campo no esta rellenado telefono');
+            } else if (_text5 == 'Не верный формат номера телефона') {
+              $(".phone-error").html('Introduce un telefono válido');
+            }
+          } else {
+            $(".phone-error").html('');
+          }
+        } else {
+          var _err$responseJSON9, _err$responseJSON9$er, _err$responseJSON10, _err$responseJSON10$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON9 = err.responseJSON) !== null && _err$responseJSON9 !== void 0 && (_err$responseJSON9$er = _err$responseJSON9.errors) !== null && _err$responseJSON9$er !== void 0 && _err$responseJSON9$er.name) {
+            $(".name-error").html(err.responseJSON.errors.name[0]);
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON10 = err.responseJSON) !== null && _err$responseJSON10 !== void 0 && (_err$responseJSON10$e = _err$responseJSON10.errors) !== null && _err$responseJSON10$e !== void 0 && _err$responseJSON10$e.phone) {
+            $(".phone-error").html(err.responseJSON.errors.phone[0]);
+          } else {
+            $(".phone-error").html('');
+            ;
+          }
+        }
+      }
+    });
   }); //Copy text to bufer
 
   var text = document.querySelector('.copy-text').innerHTML;

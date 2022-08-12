@@ -24,6 +24,9 @@ return [
          'title_text' => 'или',
          'bank' => 'Расчетный счет банка BBVA <br><span class="copy-text">ES0601820345110201816297</span>',
       ],
+      'qustion' => [
+         'btn' => 'Задать вопрос',
+      ],
 ]
 
 ?>
