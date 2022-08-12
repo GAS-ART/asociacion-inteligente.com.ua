@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ContactRequest;
-use App\Http\Requests\ContactRequestPage;
+use App\Http\Requests\QuestionRequest;
 
 class ContactController extends Controller
 {
