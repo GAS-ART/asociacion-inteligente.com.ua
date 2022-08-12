@@ -10,11 +10,8 @@
 <section class="contacts-baner">
    <div class="contacts-baner__container">
       <div class="contacts-baner__body">
-         <h1 class="contacts-baner__title">Наши контакты</h1>
-         <p class="contacts-baner__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-            Lorem Ipsum
-            является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
-            создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов</p>
+         <h1 class="contacts-baner__title">@lang('contacts.title')</h1>
+         <p class="contacts-baner__text">@lang('contacts.text')</p>
       </div>
    </div>
 </section>
@@ -68,7 +65,7 @@
          </div>
          <div class="question__form form-question">
             <div class="form-question__title">
-               Хотите задать вопрос?
+               @lang('contacts.question')
             </div>
             <form id="questionForm" name="question-form" method="POST"
                class="form-question__form @lang('language.current_lang')" action="#" autocomplete="on">
