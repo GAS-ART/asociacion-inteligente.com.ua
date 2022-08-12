@@ -77,7 +77,7 @@
                   </div>
                   <div class="question-form__item">
                      <input class="question-form__phone" type="text" name="phone" placeholder="@lang('form.phone')">
-                     <p class="name-error error"></p>
+                     <p class="phone-error error"></p>
                   </div>
                </div>
                <div class="form-question__item">
