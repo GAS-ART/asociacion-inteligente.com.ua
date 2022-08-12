@@ -2521,6 +2521,13 @@ body.lock {
   }
 }
 
+.form-question__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  margin-bottom: 20px;
+  color: #111111;
+}
 .form-question__contacts {
   display: flex;
 }

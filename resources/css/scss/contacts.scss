@@ -81,7 +81,13 @@
    }
 }
 .form-question {
-
+   &__title{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 20px;
+      color: $mainColor;
+   }
    &__form {
      
    }
