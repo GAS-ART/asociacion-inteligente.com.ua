@@ -69,6 +69,22 @@
       </div>
    </div>
 </section>
+<section class="video">
+   <div class="video__container">
+      <div class="video__body">
+         <div class="video__item">
+            <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
+               <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
+               <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
+            </video>
+         </div>
+         <div class="video__item">
+            <a href="#" class="video__link">Подробнее
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
 <section class="who">
    <div class="who__container">
       <div class="who__body">
