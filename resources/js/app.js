@@ -174,6 +174,7 @@ window.onload = function () {
             //$(".popup__load").removeClass('active');
          },
          error: function (err) {
+            console.log(err);
             //$(".popup__load").removeClass('active');
             if (questionForm.classList.contains('es')) {
                if (err?.responseJSON?.errors?.name) {
