@@ -25,7 +25,7 @@ class ContactController extends Controller
             });
    }
 
-   public function questionForm (ContactRequest $req){
+   public function questionForm (QuestionRequest $req){
 
       /*ДАННЫЕ ИЗ ФОРМЫ*/
       $name = $req->input('name');
