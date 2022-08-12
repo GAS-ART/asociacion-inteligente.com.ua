@@ -2586,6 +2586,31 @@ body.lock {
 }
 
 /*==========================QUESTION==========================*/
+/*==========================MAP==========================*/
+.map {
+  margin-bottom: 100px;
+  position: relative;
+  height: 500px;
+}
+@media (max-width: 47.99875em) {
+  .map {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .map {
+    height: 250px;
+  }
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*==========================MAP==========================*/
 .page-404 {
   position: relative;
   width: 100%;

@@ -67,8 +67,8 @@
             </ul>
          </div>
          <div class="question__form form-question">
-            <form id="questionForm" name="question-form" method="POST" class="form-question__form @lang('language.current_lang')" action="#"
-               autocomplete="on">
+            <form id="questionForm" name="question-form" method="POST"
+               class="form-question__form @lang('language.current_lang')" action="#" autocomplete="on">
                @csrf
                <div class="form-question__contacts">
                   <div class="question-form__item">
@@ -91,5 +91,10 @@
       </div>
    </div>
 
+</section>
+<section class="map">
+   <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.4453099843804!2d2.8093533156837327!3d41.96924796768376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68f4e5820387210!2zNDHCsDU4JzA5LjMiTiAywrA0OCc0MS42IkU!5e0!3m2!1sru!2sua!4v1660313040061!5m2!1sru!2sua"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 @endsection

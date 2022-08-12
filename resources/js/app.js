@@ -162,7 +162,6 @@ window.onload = function () {
 
    $("#questionForm").submit(function (event) {
       event.preventDefault();
-      //$(".popup__load").addClass('active');
       $.ajax({
          type: 'POST',
          url: 'https://asociacion-inteligente.com.ua/feedback-question',
@@ -177,10 +176,8 @@ window.onload = function () {
             $("#lead").addClass("send");
             popUp('lead');
             questionForm.reset();
-            //$(".popup__load").removeClass('active');
          },
          error: function (err) {
-            //$(".popup__load").removeClass('active');
             if (questionForm.classList.contains('es')) {
                if (err?.responseJSON?.errors?.name) {
                   let text = err.responseJSON.errors.name[0]

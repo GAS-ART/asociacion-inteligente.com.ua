@@ -183,8 +183,7 @@ window.onload = function () {
     });
   });
   $("#questionForm").submit(function (event) {
-    event.preventDefault(); //$(".popup__load").addClass('active');
-
+    event.preventDefault();
     $.ajax({
       type: 'POST',
       url: 'https://asociacion-inteligente.com.ua/feedback-question',
@@ -198,10 +197,9 @@ window.onload = function () {
         $("#lead").addClass("open");
         $("#lead").addClass("send");
         (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)('lead');
-        questionForm.reset(); //$(".popup__load").removeClass('active');
+        questionForm.reset();
       },
       error: function error(err) {
-        //$(".popup__load").removeClass('active');
         if (questionForm.classList.contains('es')) {
           var _err$responseJSON7, _err$responseJSON7$er, _err$responseJSON8, _err$responseJSON8$er;
 
