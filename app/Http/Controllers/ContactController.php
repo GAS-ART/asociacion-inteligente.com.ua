@@ -32,7 +32,7 @@ class ContactController extends Controller
       $phone = $req->input('phone');
       $text = $req->input('text');
 
-      mail::send(['html' => 'mail'], ['name' => $name, 'text' => $text, 'phone' => $phone,], function($message){
+      mail::send(['html' => 'mail_question'], ['name' => $name, 'text' => $text, 'phone' => $phone,], function($message){
          $message->to('temoha1386@gmail.com')->subject('ВОПРОС ИЗ СТРАНИЦЫ КОНТАКТЫ');
          });
    }
