@@ -21,7 +21,7 @@ class ContactController extends Controller
          $page = $req->input('page');
 
          mail::send(['html' => 'mail'], ['name' => $name, 'service' => $service, 'text' => $text, 'phone' => $phone, 'page' => $page, ], function($message){
-            $message->to('temoha1386@gmail.com')->subject('ЗАЯВКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+            $message->to('inteli.gente.ua@gmail.com')->subject('ЗАЯВКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
             });
    }
 
@@ -33,7 +33,7 @@ class ContactController extends Controller
       $text = $req->input('text');
 
       mail::send(['html' => 'mail_question'], ['name' => $name, 'text' => $text, 'phone' => $phone,], function($message){
-         $message->to('temoha1386@gmail.com')->subject('ВОПРОС ИЗ СТРАНИЦЫ КОНТАКТЫ');
+         $message->to('inteli.gente.ua@gmail.com')->subject('ВОПРОС ИЗ СТРАНИЦЫ КОНТАКТЫ');
          });
    }
 }

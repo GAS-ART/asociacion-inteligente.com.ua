@@ -43,6 +43,11 @@ window.onload = function () {
       (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(target.closest('.link-on-popup').dataset.popupId);
       e.preventDefault();
     }
+
+    if (target.classList.contains('confirm-button-close')) {
+      target.closest('.popup').classList.remove('open');
+      target.closest('.popup').classList.remove('send');
+    }
   } //Menu burger
 
 
@@ -189,13 +194,14 @@ window.onload = function () {
       processData: false,
       success: function success() {
         $(".name-error").html('');
-        $(".phone-error").html(''); //$(".popup").addClass("send");
-
+        $(".phone-error").html('');
+        $("#lead").addClass("open");
+        $("#lead").addClass("send");
+        (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)('lead');
         questionForm.reset(); //$(".popup__load").removeClass('active');
       },
       error: function error(err) {
-        console.log(err); //$(".popup__load").removeClass('active');
-
+        //$(".popup__load").removeClass('active');
         if (questionForm.classList.contains('es')) {
           var _err$responseJSON7, _err$responseJSON7$er, _err$responseJSON8, _err$responseJSON8$er;
 

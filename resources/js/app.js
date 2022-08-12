@@ -33,6 +33,10 @@ window.onload = function () {
          popUp(target.closest('.link-on-popup').dataset.popupId);
          e.preventDefault();
       }
+      if (target.classList.contains('confirm-button-close')) {
+         target.closest('.popup').classList.remove('open');
+         target.closest('.popup').classList.remove('send');
+      }
    }
 
    //Menu burger
@@ -169,12 +173,13 @@ window.onload = function () {
          success: function () {
             $(".name-error").html('');
             $(".phone-error").html('');
-            //$(".popup").addClass("send");
+            $("#lead").addClass("open");
+            $("#lead").addClass("send");
+            popUp('lead');
             questionForm.reset();
             //$(".popup__load").removeClass('active');
          },
          error: function (err) {
-            console.log(err);
             //$(".popup__load").removeClass('active');
             if (questionForm.classList.contains('es')) {
                if (err?.responseJSON?.errors?.name) {
