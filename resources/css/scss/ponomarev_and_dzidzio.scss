@@ -1,0 +1,175 @@
+.concert {
+   margin-top: 60px;
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+      margin-top: 80px;
+      margin-bottom: 30px;
+   }
+
+   &__container {
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: 600px 1fr;
+      gap: 50px;
+      @media (max-width: em(1200)) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(2, 1fr);
+         gap: 20px;
+      }
+   }
+
+   &__item {
+      &.item-concert-img{
+         max-width: 600px;
+      }
+   }
+}
+.item-concert-img {
+
+   &__img {
+      position: relative;
+         img {
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: fill;
+         }
+   }
+}
+.item-concert-description {
+
+   &__title {
+      @include adaptiveValueREM('font-size', 50,24);
+      font-weight: 800;
+      line-height: 126%;
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__text {
+      display: none;
+      line-height: 180%;
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__time {
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         font-size: 18px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__place {
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         font-size: 18px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__price {
+      @include adaptiveValueREM('font-size', 30, 22);
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: $blue;
+      @media (max-width: $mobile) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__ways-pay {
+      margin-bottom: 20px;
+   }
+
+   &__link {
+      a{
+         display: inline-block;
+         padding: 17px 60px;
+         background-color: $yellow;
+         font-weight: 500;
+         @media (pointer: fine) {
+         &:hover {
+               background-color: $blue;
+               color: #fff;
+            }
+         }
+      }
+   }
+}
+.concert-ways-pay {
+
+   &__title {
+      font-size: 14px;
+      margin-bottom: 10px;
+   }
+
+   &__way-pay {
+      display: flex;
+      align-items: center;
+   }
+
+   &__credit-card {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: all 0.3s ease 0s;
+      &.active{
+         opacity: 1;
+      }
+   }
+
+   &__paypal {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: all 0.3s ease 0s;
+      &.active{
+         opacity: 1;
+      }
+   }
+}
+.credit-card {
+
+   input{
+      cursor: pointer;
+      pointer-events: none;
+   }
+
+   &__img {
+      margin: 0 5px;
+   }
+
+   &__text {
+   }
+}
+.paypal {
+   input{
+      cursor: pointer;
+      pointer-events: none;
+   }
+
+   &__img {
+      margin: 0 5px;
+   }
+
+   &__text {
+   }
+}
+

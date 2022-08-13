@@ -80,3 +80,24 @@ Route::get('/{locale}/poster', function ($locale) {
 
  }
 })->name('poster.lang');
+
+
+Route::get('/{locale}/poster/concert_ponomariov_and_dzidzio', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('ponomarev_and_dzidzio');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('ponomarev_and_dzidzio');
+
+ }
+})->name('poster.concert_ponomariov_and_dzidzio.lang');

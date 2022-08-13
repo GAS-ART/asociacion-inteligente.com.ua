@@ -79,7 +79,7 @@
             </video>
          </div>
          <div class="video__item">
-            <a href="#" class="video__link">Подробнее
+            <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}" class="video__link">Подробнее
             </a>
          </div>
       </div>

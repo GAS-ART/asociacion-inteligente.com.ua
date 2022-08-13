@@ -265,7 +265,30 @@ window.onload = function () {
         copyBtns[1].classList.remove('copied');
       }, 15000);
     });
-  });
+  }); //Select way pay
+
+  var paymentMethods = document.querySelectorAll('._payment-method');
+
+  if (paymentMethods) {
+    var paymentMethodsBtnLink = document.querySelector('.item-concert-description__link a');
+    paymentMethods.forEach(function (payMethod) {
+      if (payMethod.querySelector('input').hasAttribute('checked')) {
+        payMethod.classList.add('active');
+        paymentMethodsBtnLink.href = payMethod.dataset.link;
+      }
+
+      ;
+      payMethod.addEventListener('click', function () {
+        paymentMethods.forEach(function (item) {
+          item.classList.remove('active');
+          if (item.querySelector('input').hasAttribute('checked')) item.querySelector('input').removeAttribute('checked');
+        });
+        payMethod.classList.add('active');
+        paymentMethodsBtnLink.href = payMethod.dataset.link;
+        payMethod.querySelector('input').setAttribute('checked', 'checked');
+      });
+    });
+  }
 };
 
 /***/ }),

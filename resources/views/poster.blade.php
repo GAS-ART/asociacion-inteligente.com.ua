@@ -15,16 +15,16 @@
       </div>
    </div>
 </section>
-<section class="concert">
-   <div class="concert__container">
-      <div class="concert__body">
-         <div class="concert__item item-concert">
-            <a class="item-concert__img" href="#"><img src="{{asset('img/poster/1.jpg')}}" alt="ponamarev"></a>
-            <a class="item-concert__link" href="#">Купить билет</a>
+<section class="poster">
+   <div class="poster__container">
+      <div class="poster__body">
+         <div class="poster__item item-poster">
+            <a class="item-poster__img" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"><img src="{{asset('img/poster/1.jpg')}}" alt="ponamarev"></a>
+            <a class="item-poster__link" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}">Купить билет</a>
          </div>
-         <div class="concert__item item-concert">
-            <!--  <a class="item-concert__img" href="#"></a>
-            <a class="item-concert__link" href="#"></a>-->
+         <div class="poster__item item-poster">
+            <!--  <a class="item-poster__img" href="#"></a>
+            <a class="item-poster__link" href="#"></a>-->
          </div>
       </div>
    </div>

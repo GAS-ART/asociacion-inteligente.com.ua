@@ -239,4 +239,25 @@ window.onload = function () {
       });
    });
 
+   //Select way pay
+   const paymentMethods = document.querySelectorAll('._payment-method');
+   if (paymentMethods) {
+      const paymentMethodsBtnLink = document.querySelector('.item-concert-description__link a');
+      paymentMethods.forEach((payMethod) => {
+         if (payMethod.querySelector('input').hasAttribute('checked')) {
+            payMethod.classList.add('active');
+            paymentMethodsBtnLink.href = payMethod.dataset.link;
+         };
+         payMethod.addEventListener('click', function () {
+            paymentMethods.forEach(item => {
+               item.classList.remove('active')
+               if (item.querySelector('input').hasAttribute('checked')) item.querySelector('input').removeAttribute('checked');
+            });
+            payMethod.classList.add('active');
+            paymentMethodsBtnLink.href = payMethod.dataset.link;
+            payMethod.querySelector('input').setAttribute('checked', 'checked');
+         });
+      })
+
+   }
 }

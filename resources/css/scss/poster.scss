@@ -16,7 +16,7 @@
 /*==========================BANER==========================*/
 
 /*==========================CONCERT==========================*/
-.concert {
+.poster {
    margin-bottom: 100px;
    @media (max-width: $mobile) {
       margin-bottom: 30px;
@@ -40,7 +40,7 @@
       max-width: 500px;
    }
 }
-.item-concert {
+.item-poster {
 
    &__img {
       display: block;

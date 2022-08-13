@@ -2638,47 +2638,47 @@ body.lock {
 
 /*==========================BANER==========================*/
 /*==========================CONCERT==========================*/
-.concert {
+.poster {
   margin-bottom: 100px;
 }
 @media (max-width: 47.99875em) {
-  .concert {
+  .poster {
     margin-bottom: 30px;
   }
 }
-.concert__body {
+.poster__body {
   display: grid;
   grid-template-columns: 500px 500px;
   gap: 100px;
 }
 @supports (gap: clamp( 1.5625rem , -6.25rem  +  10.4166666667vw , 6.25rem )) {
-  .concert__body {
+  .poster__body {
     gap: clamp( 1.5625rem , -6.25rem  +  10.4166666667vw , 6.25rem );
   }
 }
 @supports not (gap: clamp( 1.5625rem , -6.25rem  +  10.4166666667vw , 6.25rem )) {
-  .concert__body {
+  .poster__body {
     gap: calc(
          1.5625rem + 4.6875 * (100vw - 75rem) / 45
       );
   }
 }
 @media (max-width: 75em) {
-  .concert__body {
+  .poster__body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
   }
 }
-.concert__item {
+.poster__item {
   max-width: 500px;
 }
 
-.item-concert__img {
+.item-poster__img {
   display: block;
   position: relative;
   margin-bottom: 20px;
 }
-.item-concert__img img {
+.item-poster__img img {
   position: relative;
   top: 0;
   left: 0;
@@ -2687,7 +2687,7 @@ body.lock {
   -o-object-fit: fill;
      object-fit: fill;
 }
-.item-concert__link {
+.item-poster__link {
   display: block;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -2701,12 +2701,187 @@ body.lock {
   line-height: 120%;
 }
 @media (pointer: fine) {
-  .item-concert__link:hover {
+  .item-poster__link:hover {
     background-color: #28478A;
     color: #fff;
   }
 }
 
+.concert {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+@media (max-width: 47.99875em) {
+  .concert {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+.concert__body {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 50px;
+}
+@media (max-width: 75em) {
+  .concert__body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+.concert__item.item-concert-img {
+  max-width: 600px;
+}
+
+.item-concert-img__img {
+  position: relative;
+}
+.item-concert-img__img img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.item-concert-description__title {
+  font-weight: 800;
+  line-height: 126%;
+  margin-bottom: 20px;
+}
+@supports (font-size: clamp( 1.5rem , 0.9285714286rem  +  2.8571428571vw , 3.125rem )) {
+  .item-concert-description__title {
+    font-size: clamp( 1.5rem , 0.9285714286rem  +  2.8571428571vw , 3.125rem );
+  }
+}
+@supports not (font-size: clamp( 1.5rem , 0.9285714286rem  +  2.8571428571vw , 3.125rem )) {
+  .item-concert-description__title {
+    font-size: calc(
+         1.5rem + 1.625 * (100vw - 20rem) / 56.875
+      );
+  }
+}
+@media (max-width: 47.99875em) {
+  .item-concert-description__title {
+    margin-bottom: 15px;
+  }
+}
+.item-concert-description__text {
+  display: none;
+  line-height: 180%;
+  margin-bottom: 20px;
+}
+@media (max-width: 47.99875em) {
+  .item-concert-description__text {
+    margin-bottom: 15px;
+  }
+}
+.item-concert-description__time {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 47.99875em) {
+  .item-concert-description__time {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+.item-concert-description__place {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 47.99875em) {
+  .item-concert-description__place {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+.item-concert-description__price {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #28478A;
+}
+@supports (font-size: clamp( 1.375rem , 1.1991758242rem  +  0.8791208791vw , 1.875rem )) {
+  .item-concert-description__price {
+    font-size: clamp( 1.375rem , 1.1991758242rem  +  0.8791208791vw , 1.875rem );
+  }
+}
+@supports not (font-size: clamp( 1.375rem , 1.1991758242rem  +  0.8791208791vw , 1.875rem )) {
+  .item-concert-description__price {
+    font-size: calc(
+         1.375rem + 0.5 * (100vw - 20rem) / 56.875
+      );
+  }
+}
+@media (max-width: 47.99875em) {
+  .item-concert-description__price {
+    margin-bottom: 15px;
+  }
+}
+.item-concert-description__ways-pay {
+  margin-bottom: 20px;
+}
+.item-concert-description__link a {
+  display: inline-block;
+  padding: 17px 60px;
+  background-color: #FAD900;
+  font-weight: 500;
+}
+@media (pointer: fine) {
+  .item-concert-description__link a:hover {
+    background-color: #28478A;
+    color: #fff;
+  }
+}
+
+.concert-ways-pay__title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.concert-ways-pay__way-pay {
+  display: flex;
+  align-items: center;
+}
+.concert-ways-pay__credit-card {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease 0s;
+}
+.concert-ways-pay__credit-card.active {
+  opacity: 1;
+}
+.concert-ways-pay__paypal {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease 0s;
+}
+.concert-ways-pay__paypal.active {
+  opacity: 1;
+}
+
+.credit-card input {
+  cursor: pointer;
+  pointer-events: none;
+}
+.credit-card__img {
+  margin: 0 5px;
+}
+.paypal input {
+  cursor: pointer;
+  pointer-events: none;
+}
+.paypal__img {
+  margin: 0 5px;
+}
 .page-404 {
   position: relative;
   width: 100%;
