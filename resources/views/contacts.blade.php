@@ -7,11 +7,11 @@
 
 
 @section('content')
-<section class="contacts-baner">
-   <div class="contacts-baner__container">
-      <div class="contacts-baner__body">
-         <h1 class="contacts-baner__title">@lang('contacts.title')</h1>
-         <p class="contacts-baner__text">@lang('contacts.text')</p>
+<section class="contacts-baner _baner">
+   <div class="_baner__container">
+      <div class="_baner__body">
+         <h1 class="_baner__title">@lang('contacts.title')</h1>
+         <p class="_baner__text">@lang('contacts.text')</p>
       </div>
    </div>
 </section>

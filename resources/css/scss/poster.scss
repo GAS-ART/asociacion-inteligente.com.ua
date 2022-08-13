@@ -1,0 +1,76 @@
+/*==========================BANER==========================*/
+// All other styles for this element you find in base/technical.scss
+.poster-baner{
+   &._baner{
+      background: linear-gradient(86.4deg, rgba(41, 41, 41, 0.5) 0.66%, rgba(41, 41, 41, 0) 82.38%), url('/img/poster/baner.jpg'), #FBFCF6;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media (max-width: $mobile) {
+         margin-bottom: 30px;
+      }
+   }
+   ._baner__container{
+      padding-bottom: 14.584%;
+   }
+}
+/*==========================BANER==========================*/
+
+/*==========================CONCERT==========================*/
+.concert {
+   margin-bottom: 100px;
+   @media (max-width: $mobile) {
+      margin-bottom: 30px;
+   }
+
+   &__container {
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: 500px 500px;
+      gap: 100px;
+      @include adaptiveValueREM('gap', 100, 25, 1920, 1200, 1);
+      @media (max-width: em(1200)) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(2, 1fr);
+      }
+   }
+
+   &__item {
+      max-width: 500px;
+   }
+}
+.item-concert {
+
+   &__img {
+      display: block;
+      position: relative;
+      margin-bottom: 20px;
+      img {
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: fill;
+      }
+   }
+
+   &__link {
+      display: block;
+      width: min-content;
+      white-space: nowrap;
+      margin: 0 auto;
+      padding: 15px 40px;
+      background-color: $yellow;
+      transition: all 0.3s ease 0s;
+      font-weight: 500;
+      line-height: 120%;
+      @media (pointer: fine) {
+      &:hover {
+            background-color: $blue;
+            color: #fff;
+         }
+      }
+   }
+}

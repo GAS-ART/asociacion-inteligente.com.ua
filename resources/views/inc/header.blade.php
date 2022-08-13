@@ -22,7 +22,7 @@
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="{{ route('poster.lang', ['locale' => __('language.current_lang')]) }}" class="menu__link">
                            @lang('header.menu.poster')
                         </a>
                      </li>

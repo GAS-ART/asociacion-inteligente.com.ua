@@ -1,0 +1,32 @@
+/*==========================BANER==========================*/
+._baner {
+   position: relative;
+   margin-top: 60px;
+   margin-bottom: 100px;
+
+   &__body{
+      position: relative;
+      @include adaptiveValueREM('top', 150, 50, 1920, 768, 1);
+   }
+
+   &__title {
+      font-weight: 800;
+      @include adaptiveValueREM('font-size', 50, 22);
+      line-height: 126%;
+      color: #fff;
+      margin-bottom: em(20, 50);
+   }
+
+   &__text {
+      max-width: 760px;
+      line-height: 180%;
+      color: #fff;
+      
+      @media (max-width: em(1200)) {
+         @include adaptiveValueREM('padding-right', 100, 300, 1200, 768, 1);
+      }
+      @media (max-width: $mobile) {
+         padding-right: unset;
+      }
+   }
+}
