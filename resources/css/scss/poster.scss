@@ -28,11 +28,13 @@
    &__body {
       display: grid;
       grid-template-columns: 500px 500px;
-      gap: 100px;
       @include adaptiveValueREM('gap', 100, 25, 1920, 1200, 1);
       @media (max-width: em(1200)) {
          grid-template-columns: 1fr;
-         grid-template-rows: repeat(2, 1fr);
+         grid-template-rows: repeat(2, min-content);
+         &:last-child{
+            gap: 0;
+         }
       }
    }
 

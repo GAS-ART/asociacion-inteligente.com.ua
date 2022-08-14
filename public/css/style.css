@@ -2646,7 +2646,6 @@ body.lock {
 .poster__body {
   display: grid;
   grid-template-columns: 500px 500px;
-  gap: 100px;
 }
 @supports (gap: clamp( 1.5625rem , -6.25rem  +  10.4166666667vw , 6.25rem )) {
   .poster__body {
@@ -2663,7 +2662,11 @@ body.lock {
 @media (max-width: 75em) {
   .poster__body {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
+  .poster__body:last-child {
+    gap: 0;
   }
 }
 .poster__item {
