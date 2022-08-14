@@ -2664,8 +2664,6 @@ body.lock {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, -webkit-min-content);
     grid-template-rows: repeat(2, min-content);
-  }
-  .poster__body:last-child {
     gap: 0;
   }
 }
@@ -2725,7 +2723,8 @@ body.lock {
 @media (max-width: 75em) {
   .concert__body {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
     gap: 20px;
   }
 }
