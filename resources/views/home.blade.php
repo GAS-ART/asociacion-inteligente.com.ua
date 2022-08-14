@@ -69,27 +69,28 @@
       </div>
    </div>
 </section>
-<section class="video">
-   <div class="video__container">
-      <div class="video__body">
-         <div class="video__item">
-            <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
-               <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
-               <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
-            </video>
-         </div>
-         <div class="video__item">
-            <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}" class="video__link">Подробнее
-            </a>
-         </div>
-      </div>
-   </div>
-</section>
 <section class="who">
    <div class="who__container">
       <div class="who__body">
-         <h2 class="who__title">@lang('home.who.title')</h2>
-         <div class="who__text">@lang('home.who.text')</div>
+         <div class="who__item">
+            <h2 class="who__title">@lang('home.who.title')</h2>
+            <div class="who__video video">
+               <div class="video__item">
+                  <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
+                     <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
+                     <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
+                  </video>
+               </div>
+               <div class="video__item">
+                  <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"
+                     class="video__link">Подробнее
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="who__item">
+            <div class="who__text">@lang('home.who.text')</div>
+         </div>
       </div>
    </div>
 </section>

@@ -155,54 +155,6 @@
 }
 /*==========================BANER==========================*/
 
-/*==========================VIDEO==========================*/
-.video {
-   margin-bottom: 60px;
-   @media (max-width: $mobile) {
-   margin-bottom: 30px;
-   }
-
-   &__container {
-   }
-
-   &__body {
-   }
-
-   &__item {
-      position: relative;
-      max-width: 848px;
-      margin: 0 auto 15px auto;
-      text-align: center;
-      &:last-child{
-         margin: 0 auto 0 auto;
-      }
-   }
-
-   &__video {
-      position: relative;
-      width: 100%;
-      height: 100%;
-   }
-
-   &__link {
-      display: inline-block;
-      margin: 0 auto;
-      @include adaptiveValueREM('font-size', 20,16 );
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 20px 60px;
-      background-color: $yellow;
-      transition: all 0.3s ease 0s;
-      @media (pointer: fine) {
-      &:hover {
-         background-color: $blue;
-         color: #fff;
-      }
-      }
-   }
-}
-/*==========================VIDEO==========================*/
-
 /*==========================WHO==========================*/
 .who {
    position: relative;
@@ -224,13 +176,61 @@
       }
    }
 
+   &__item{
+      &:first-child{
+         @media (max-width: $mobile) {
+            margin-bottom: 25px;
+         }
+      }
+   }
+
+   .video {
+
+      &__item {
+         position: relative;
+         max-width: 280px;
+         //margin: 0 auto 15px auto;
+         text-align: center;
+         &:not(:last-child){
+            margin-bottom: 15px;
+         }
+         &:last-child{
+            margin: 0 auto 0 auto;
+         }
+      }
+   
+      &__video {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+   
+      &__link {
+         display: inline-block;
+         margin: 0 auto;
+         @include adaptiveValueREM('font-size', 20,16 );
+         font-weight: bold;
+         text-transform: uppercase;
+         padding: 10px 20px;
+         background-color: $yellow;
+         transition: all 0.3s ease 0s;
+         @media (pointer: fine) {
+         &:hover {
+            background-color: $blue;
+            color: #fff;
+         }
+         }
+      }
+   }
+
    &__title {
       @include adaptiveValueREM('font-size', 50,24);
       color: $title;
       font-weight: 800;
-      max-width: 180px;
+      min-width: 180px;
       line-height: 1.26;
       margin-right: 120px;
+      margin-bottom: 55px;
       @media (max-width: $mobile) {
       max-width: 100%;
       text-align: center;
@@ -252,6 +252,7 @@
       text-align: center;
       }
    }
+   
 }
 /*==========================WHO==========================*/
 
