@@ -1347,8 +1347,24 @@ body.lock {
 
 /*==========================CHARITY==========================*/
 /*==========================POPUOP-VIDEO==========================*/
+@media (max-width: 61.99875em) {
+  #video {
+    align-items: center;
+  }
+}
+@media (max-height: 50em) {
+  #video {
+    align-items: center;
+  }
+}
 #video .popup__content {
   flex-direction: column;
+  min-height: unset;
+}
+#video .popup__video {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 #video .popup__video video {
   position: relative;

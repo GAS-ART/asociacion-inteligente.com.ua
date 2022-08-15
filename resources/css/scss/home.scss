@@ -622,10 +622,18 @@
 
 /*==========================POPUOP-VIDEO==========================*/
 #video{
+   @media (max-width: $tablet) {
+      align-items: center;
+   }
+   @media (max-height: em(800)) {
+      align-items: center;
+   }
    .popup__content{
       flex-direction: column;
+      min-height: unset;
    }
    .popup__video {
+      height: min-content;
       video {
          position: relative;
          width: 100%;
