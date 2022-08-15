@@ -184,45 +184,6 @@
       }
    }
 
-   .video {
-
-      &__item {
-         position: relative;
-         max-width: 280px;
-         //margin: 0 auto 15px auto;
-         text-align: center;
-         &:not(:last-child){
-            margin-bottom: 15px;
-         }
-         &:last-child{
-            margin: 0 auto 0 auto;
-         }
-      }
-   
-      &__video {
-         position: relative;
-         width: 100%;
-         height: 100%;
-      }
-   
-      &__link {
-         display: inline-block;
-         margin: 0 auto;
-         @include adaptiveValueREM('font-size', 20,16 );
-         font-weight: bold;
-         text-transform: uppercase;
-         padding: 10px 20px;
-         background-color: $yellow;
-         transition: all 0.3s ease 0s;
-         @media (pointer: fine) {
-         &:hover {
-            background-color: $blue;
-            color: #fff;
-         }
-         }
-      }
-   }
-
    &__title {
       @include adaptiveValueREM('font-size', 50,24);
       color: $title;
@@ -658,3 +619,27 @@
 }
 
 /*==========================CHARITY==========================*/
+
+/*==========================POPUOP-VIDEO==========================*/
+#video{
+   .popup__content{
+      flex-direction: column;
+   }
+   .popup__video {
+      video {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+   }
+   .item-help__link{
+      @media (pointer: fine) {
+         &:hover {
+            background-color: $blue;
+            color: #fff;
+         }
+      }
+   }
+}
+
+/*==========================POPUOP-VIDEO==========================*/

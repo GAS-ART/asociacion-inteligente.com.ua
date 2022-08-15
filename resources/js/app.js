@@ -260,4 +260,11 @@ window.onload = function () {
       })
 
    }
+   //Open popup video
+   const popupVideo = document.getElementById('video');
+   if (popupVideo) {
+      setTimeout(() => {
+         popUp(popupVideo.id);
+      }, 4000);
+   }
 }

@@ -9,6 +9,7 @@
          </main>
       @include('inc.footer')
       @include('inc.popup')
+      @yield('popup_video')
    </div>
 </body>
 

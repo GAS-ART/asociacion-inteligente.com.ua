@@ -5,7 +5,6 @@
 @section('ogDescription', __('titles.home.ogDescription'))
 @section('ogUrl', __('titles.home.ogUrl'))
 
-
 @section('content')
 <section class="baner">
    <div class="baner__container">
@@ -74,19 +73,6 @@
       <div class="who__body">
          <div class="who__item">
             <h2 class="who__title">@lang('home.who.title')</h2>
-            <div class="who__video video">
-               <div class="video__item">
-                  <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
-                     <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
-                     <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
-                  </video>
-               </div>
-               <div class="video__item">
-                  <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"
-                     class="video__link">Подробнее
-                  </a>
-               </div>
-            </div>
          </div>
          <div class="who__item">
             <div class="who__text">@lang('home.who.text')</div>
@@ -261,4 +247,22 @@
       </div>
    </div>
 </section>
+@endsection
+
+@section('popup_video')
+<div id="video" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close close-popup"><span></span><span></span></a>
+         <div class="popup__video">
+            <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
+               <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
+               <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
+            </video>
+         </div>
+         <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"
+            class="item-help__link">@lang('ponomariov.more_info')</a>
+      </div>
+   </div>
+</div>
 @endsection

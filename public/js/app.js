@@ -288,6 +288,15 @@ window.onload = function () {
         payMethod.querySelector('input').setAttribute('checked', 'checked');
       });
     });
+  } //Open popup video
+
+
+  var popupVideo = document.getElementById('video');
+
+  if (popupVideo) {
+    setTimeout(function () {
+      (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(popupVideo.id);
+    }, 4000);
   }
 };
 
@@ -307,7 +316,7 @@ function popUp(popupId) {
   var popUp = document.getElementById(popupId);
   var bodyLock = document.getElementById('body');
   var popupCloseIcon = popUp.querySelector('.close-popup');
-  var popupBtn = popUp.querySelector('.confirm-button');
+  var popupBtn = popUp.querySelector('.confirm-button') || false;
   var popupSending = popUp.querySelector('.popup__load') || false;
   var filePreview = popUp.querySelector('.preview-file') || false;
   popUp.classList.add('open');
@@ -316,9 +325,12 @@ function popUp(popupId) {
     popupClose(popUp);
     e.preventDefault();
   });
-  popupBtn.addEventListener('click', function () {
-    popupClose(popUp);
-  });
+
+  if (popupBtn) {
+    popupBtn.addEventListener('click', function () {
+      popupClose(popUp);
+    });
+  }
 
   function popupClose(popupActive) {
     popupActive.classList.remove('open');

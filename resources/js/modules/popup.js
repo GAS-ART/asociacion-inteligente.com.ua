@@ -2,7 +2,7 @@ export function popUp(popupId) {
 	const popUp = document.getElementById(popupId);
 	const bodyLock = document.getElementById('body');
 	const popupCloseIcon = popUp.querySelector('.close-popup');
-	const popupBtn = popUp.querySelector('.confirm-button');
+	const popupBtn = popUp.querySelector('.confirm-button') || false;
 	const popupSending = popUp.querySelector('.popup__load') || false;
 	const filePreview = popUp.querySelector('.preview-file') || false;
 	popUp.classList.add('open');
@@ -13,9 +13,12 @@ export function popUp(popupId) {
 		e.preventDefault();
 	});
 
-	popupBtn.addEventListener('click', function () {
-		popupClose(popUp);
-	});
+	if (popupBtn) {
+		popupBtn.addEventListener('click', function () {
+			popupClose(popUp);
+		});
+	}
+
 
 	function popupClose(popupActive) {
 		popupActive.classList.remove('open');
