@@ -14,15 +14,90 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/locale/{locale}',  'LanguagesController@changeLocale')->name('locale');
-Route::post('feedback', 'ContactController@feedBackForm')->name('contactForm');
-Route::post('feedback-question', 'ContactController@questionForm')->name('contactFormQuestion');
+Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
+Route::post('feedback', 'App\Http\Controllers\ContactController@feedBackForm')->name('contactForm');
+Route::post('feedback-question', 'App\Http\Controllers\ContactController@questionForm')->name('contactFormQuestion');
 
 Route::get('/', function () {App::setLocale('ru'); return view('home');})->name('index');
 Route::get('/ru', function () {App::setLocale('ru'); return  redirect('/');});
-Route::get('/es', function () {App::setLocale('es'); return  view('home');});
 
-Route::get('/{locale}', 'LanguagesController@routing')->name('home.lang');
-Route::get('/{locale}/contacts', 'LanguagesController@routing')->name('contacts.lang');
-Route::get('/{locale}/poster', 'LanguagesController@routing')->name('poster.lang');
-Route::get('/{locale}/poster/concert_ponomariov_and_dzidzio', 'LanguagesController@routing')->name('poster.concert_ponomariov_and_dzidzio.lang');
+Route::get('/{locale}', function ($locale) {
+   
+    if (! in_array($locale, ['es', 'ru'])) { 
+ 
+       abort(404);
+ 
+    }  else if ($locale == 'es') {
+ 
+       App::setLocale('es');
+       return view('home');
+ 
+    }
+    else if ($locale == 'ru') {
+ 
+     App::setLocale('ru');
+     return view('home');
+ 
+  }
+ })->name('home.lang');
+
+ Route::get('/{locale}/contacts', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('contacts');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('contacts');
+
+ }
+})->name('contacts.lang');
+
+Route::get('/{locale}/poster', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('poster');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('poster');
+
+ }
+})->name('poster.lang');
+
+
+Route::get('/{locale}/poster/concert_ponomariov_and_dzidzio', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('ponomarev_and_dzidzio');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('ponomarev_and_dzidzio');
+
+ }
+})->name('poster.concert_ponomariov_and_dzidzio.lang');

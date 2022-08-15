@@ -29,16 +29,4 @@ class languagesController extends Controller
         $urlPart = Str::after($urlPart, $urlLanguagePrefix);
         return redirect($domain . $locale . $urlPart);
     }
-
-    public function routing($locale) {
-        if (! in_array($locale, ['es', 'ru'])) { 
-            abort(404);
-        } else if ($locale == 'es') {
-            App::setLocale('es');
-            return view(Str::afterLast(URL::current(), '/')); // lastPartURL == view name
-        } else if ($locale == 'ru') {
-            App::setLocale('ru');
-            return view(Str::afterLast(URL::current(), '/')); // lastPartURL == view name
-        }
-    }
 }
