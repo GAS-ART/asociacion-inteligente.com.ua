@@ -101,3 +101,23 @@ Route::get('/{locale}/poster/concert_ponomariov_and_dzidzio', function ($locale)
 
  }
 })->name('poster.concert_ponomariov_and_dzidzio.lang');
+
+Route::get('/{locale}/poster/charity_dinner', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('charity_dinner');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('charity_dinner');
+
+ }
+})->name('poster.charity_dinner.lang');

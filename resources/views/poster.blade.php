@@ -19,12 +19,12 @@
    <div class="poster__container">
       <div class="poster__body">
          <div class="poster__item item-poster">
-            <a class="item-poster__img" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"><img src="{{asset('img/poster/1.jpg')}}" alt="ponamarev"></a>
-            <a class="item-poster__link" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}">Купить билет</a>
+            <a class="item-poster__img" href="{{ route('poster.charity_dinner.lang', ['locale' => __('language.current_lang')]) }}"><img src="{{asset('img/poster/1.jpg')}}" alt="Charity Dinner"></a>
+            <a class="item-poster__link" href="{{ route('poster.charity_dinner.lang', ['locale' => __('language.current_lang')]) }}">Купить билет</a>
          </div>
          <div class="poster__item item-poster">
-            <!--  <a class="item-poster__img" href="#"></a>
-            <a class="item-poster__link" href="#"></a>-->
+            <a class="item-poster__img" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"><img src="{{asset('img/poster/concert.jpg')}}" alt="ponamarev"></a>
+            <a class="item-poster__link" href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}">Купить билет</a>
          </div>
       </div>
    </div>

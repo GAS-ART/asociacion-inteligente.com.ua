@@ -3,11 +3,16 @@
    return [
    'title' => 'Cena Benefica',
    'text' => '',
-   'time' => '02/09 19:30 horas ',
+   'time' => '03/09 19:00 horas ',
    'place' => 'Hotel S’agaro (Girona)',
-   'price' => '30Є',
+   'price' => '40Є',
    'pay_method' => 'Способ оплаты',
    'buy_link' => 'Купить билет',
    'more_info' => 'Подробнее',
+   'charity_diner' => [
+      'title' => 'Благотворительный ужин',
+      'time' => 'Начало 02/09 в 19:30',
+      'price' => '100Є',
+      ],
    ];
 ?>

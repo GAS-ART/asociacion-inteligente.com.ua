@@ -2654,7 +2654,7 @@ body.lock {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, -webkit-min-content);
     grid-template-rows: repeat(2, min-content);
-    gap: 0;
+    gap: 30px;
   }
 }
 .poster__item {
