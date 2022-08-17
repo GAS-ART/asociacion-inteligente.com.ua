@@ -4,7 +4,7 @@
    'title' => 'Cena Benefica',
    'text' => '',
    'time' => '03/09 19:00 horas ',
-   'place' => 'Hotel S’agaro (Girona)',
+   'place' => 'Teatre Auditori Municipal de Sant Feliu de Guixols (Girona)',
    'price' => '40Є',
    'pay_method' => 'Способ оплаты',
    'buy_link' => 'Купить билет',
