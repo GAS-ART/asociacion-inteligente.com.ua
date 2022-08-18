@@ -243,18 +243,25 @@ window.onload = function () {
    const paymentMethods = document.querySelectorAll('._payment-method');
    if (paymentMethods) {
       const paymentMethodsBtnLink = document.querySelector('.item-concert-description__link a');
+      const paypalSubmitForm = document.querySelector('.paypal-btn');
       paymentMethods.forEach((payMethod) => {
          if (payMethod.querySelector('input').hasAttribute('checked')) {
             payMethod.classList.add('active');
-            paymentMethodsBtnLink.href = payMethod.dataset.link;
          };
          payMethod.addEventListener('click', function () {
+
+            if (payMethod.dataset.pay == "stripe") {
+               paymentMethodsBtnLink.href = payMethod.dataset.link;
+               paypalSubmitForm.classList.remove('active');
+            } else if (payMethod.dataset.pay == "paypal") {
+               paypalSubmitForm.classList.add('active');
+            }
+
             paymentMethods.forEach(item => {
                item.classList.remove('active')
                if (item.querySelector('input').hasAttribute('checked')) item.querySelector('input').removeAttribute('checked');
             });
             payMethod.classList.add('active');
-            paymentMethodsBtnLink.href = payMethod.dataset.link;
             payMethod.querySelector('input').setAttribute('checked', 'checked');
          });
       })

@@ -2814,8 +2814,12 @@ body.lock {
 .item-concert-description__ways-pay {
   margin-bottom: 20px;
 }
+.item-concert-description__link {
+  position: relative;
+}
 .item-concert-description__link a {
   display: inline-block;
+  position: relative;
   padding: 17px 60px;
   background-color: #FAD900;
   font-weight: 500;
@@ -3014,4 +3018,25 @@ body.lock {
   ._baner__text {
     padding-right: unset;
   }
+}
+
+.paypal-btn {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.paypal-btn.active {
+  pointer-events: all;
+  visibility: visible;
+}
+.paypal-btn .paypal-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

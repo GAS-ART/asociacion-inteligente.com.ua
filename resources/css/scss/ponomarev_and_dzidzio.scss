@@ -96,8 +96,10 @@
    }
 
    &__link {
+      position: relative;
       a{
          display: inline-block;
+         position: relative;
          padding: 17px 60px;
          background-color: $yellow;
          font-weight: 500;
