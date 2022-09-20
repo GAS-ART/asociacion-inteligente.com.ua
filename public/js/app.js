@@ -296,15 +296,6 @@ window.onload = function () {
         payMethod.querySelector('input').setAttribute('checked', 'checked');
       });
     });
-  } //Open popup video
-
-
-  var popupVideo = document.getElementById('video');
-
-  if (popupVideo) {
-    setTimeout(function () {
-      (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(popupVideo.id);
-    }, 4000);
   }
 };
 

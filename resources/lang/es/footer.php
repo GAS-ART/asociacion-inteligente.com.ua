@@ -27,7 +27,7 @@
       'card' => 'Credit Card',
    ],
    'copiright' => [
-      'developed' => '2022 Creado por target="_blank" <a href="https://colorit.agency/">Colorit agency</a>',
+      'developed' => '2022 Creado por <a target="_blank" href="https://colorit.agency/es">Colorit agency</a>',
       'rights' => '© Todos los derechos reservados',
    ],
 ]

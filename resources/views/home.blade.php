@@ -248,21 +248,3 @@
    </div>
 </section>
 @endsection
-
-@section('popup_video')
-<div id="video" class="popup">
-   <div class="popup__body">
-      <div class="popup__content">
-         <a href="#" class="popup__close close-popup"><span></span><span></span></a>
-         <div class="popup__video">
-            <video autoplay="" controls playsinline="" muted="" loop="" preload="auto" class="video__video">
-               <source type="video/mp4" src="{{asset('/img/home/ponomarev.mp4')}}">
-               <source type="video/webm" src="{{asset('/img/home/ponomarev.webm')}}">
-            </video>
-         </div>
-         <a href="{{ route('poster.concert_ponomariov_and_dzidzio.lang', ['locale' => __('language.current_lang')]) }}"
-            class="item-help__link">@lang('ponomariov.more_info')</a>
-      </div>
-   </div>
-</div>
-@endsection
