@@ -223,12 +223,14 @@ window.onload = function () {
 
    //Copy text to bufer
    const text = document.querySelector('.copy-text').innerHTML;
+   const copyBtnLang = document.querySelector('.popup__copy-btn');
    const copyBtns = document.querySelectorAll('.copy-text');
    const btnText = copyBtns[1].innerHTML;
    copyBtns.forEach(btn => {
       btn.addEventListener('click', function (e) {
          navigator.clipboard.writeText(text);
-         copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН";
+         console.log(copyBtnLang);
+         copyBtnLang.classList.contains('ru') ? copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН" : copyBtns[1].innerHTML = "Copiar el texto";
          copyBtns[0].classList.add('copied');
          copyBtns[1].classList.add('copied');
          setTimeout(() => {

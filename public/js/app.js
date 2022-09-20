@@ -251,12 +251,14 @@ window.onload = function () {
   }); //Copy text to bufer
 
   var text = document.querySelector('.copy-text').innerHTML;
+  var copyBtnLang = document.querySelector('.popup__copy-btn');
   var copyBtns = document.querySelectorAll('.copy-text');
   var btnText = copyBtns[1].innerHTML;
   copyBtns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       navigator.clipboard.writeText(text);
-      copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН";
+      console.log(copyBtnLang);
+      copyBtnLang.classList.contains('ru') ? copyBtns[1].innerHTML = "ТЕКСТ СКОПИРОВАН" : copyBtns[1].innerHTML = "Copiar el texto";
       copyBtns[0].classList.add('copied');
       copyBtns[1].classList.add('copied');
       setTimeout(function () {

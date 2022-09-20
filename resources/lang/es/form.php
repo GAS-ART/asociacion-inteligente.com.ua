@@ -1,30 +1,23 @@
 <?php
 
 return [
-   'tittle' => 'Чем вы можете помочь нашей организации',
-   'name' => 'Ваше имя',
-   'phone' => 'Номер телефона',
-   'email' => 'Эл. адрес',
-   'text' => 'Ваш комментарий',
-   'file' => 'Прикрепить файл',
-   'button' => 'Оставить заявку',
-   'success' => 'Спасибо!<br><br>Приятно познакомиться.<br><br>В скором времени, мы с тобой свяжемся',
-   'page_form' =>
-      [
-         'outdorAdvertising' => 'Нужна помощь в выборе вывески?',
-         'smm' => 'Нужна помощь в Смм? Напиши нам',
-         'polygraphy' => 'Заказать уф печать в Барселоне уже сегодня',
-         'text' => 'Оставляй заявку и мы перезвоним',
-         'contacts' => 'Создадим проект?',
-         'contacts_text' => '"Colorit agency" - рекламно/креативное агентство полного цикла в Барселоне. Мы решим любую задачу, связанную с рекламой: от разработки фирменного стиля и стратегии, до оформления наружной рекламы и создания веб-сайта.',
-      ],
+   'tittle' => 'RELLENA EL FORMULARIO',
+   'title_text' => 'En que podeis ayudar a Asociacion de Ucranianos?',
+   'name' => 'Nombre',
+   'phone' => 'Telefono',
+   'email' => 'Correo electronico',
+   'text' => 'Comentarios',
+   'file' => 'Adjuntar archivo',
+   'button' => 'Contactar',
+   'success' => 'Gracias!<br><br>Encantado de conocerte.<br><br>En breve nos pondremos en contacto contigo',
       'pay' => [
-         'title' => 'Для пожертвования выберете удобную форму оплаты',
-         'title_text' => 'или',
-         'bank' => 'Расчетный счет банка BBVA <br><span class="copy-text">ES0601820345110201816297</span>',
+         'title' => 'Para donar elige unas de nuestras formas',
+         'title_text' => 'o',
+         'bank' => 'Cuenta bancaria banco BBVA <br><span class="copy-text">ES0601820345110201816297</span>',
+         'copy' => 'Copiar la cuenta',
       ],
       'qustion' => [
-         'btn' => 'Задать вопрос',
+         'btn' => 'Hacer una pregunta',
       ],
 ]
 

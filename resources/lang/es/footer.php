@@ -1,27 +1,27 @@
 <?php
 
    return [ 
-   'text' => 'Помощь Украинцам в Испании',
+   'text' => 'Ayuda a los Ucranianos en España',
    'menu' => 
    [
-      'about' => 'О нас',
-      'services' => 'Услуги',
-      'poster' => 'Афиша',
-      'news' => 'Новости/Преса',
-      'help' => 'Взаимопомощь',
-      'contact' => 'Контакты',
+      'about' => 'Sobre nosotros',
+      'services' => 'Servicios',
+      'poster' => 'Agenda',
+      'news' => 'Notocias',
+      'help' => 'Ayuda mutua ',
+      'contact' => 'Contactos',
    ],
    'contacts' => 
    [
-      'address' => '<p>Адрес</p><p>С/Puigcugul 48 Cassa de la Selva 17244 Girona</p>',
-      'phone' => '<p>Телефон</p><a href="tel:%2B34698560864">+34 698 560 864</a>',
+      'address' => '<p>Dirección</p><p>Calle Castellón de la Plana 3,Girona 17005</p>',
+      'phone' => '<p>Telefono</p><a href="tel:%2B34698560864">+34 698 560 864</a>',
       'phone_1' => '<a href="tel:%2B34664895661">+34 664 895 661</a>',
       'phone_2' => '<a href="tel:%2B34717194632">+34 717 194 632</a>',
-      'email' => '<p>Электронная почта</p><a href="mailto:inteli.gente.ua@gmail.com">inteli.gente.ua@gmail.com</a>',
+      'email' => '<p>Correo electronico</p><a href="mailto:inteli.gente.ua@gmail.com">inteli.gente.ua@gmail.com</a>',
    ],
    'donate' =>
    [
-      'title' => 'Помочь Украине',
+      'title' => 'Ayudar a Ucrania',
       'paypal' => 'PayPal',
       'crypto' => 'Crypto',
       'card' => 'Credit Card',

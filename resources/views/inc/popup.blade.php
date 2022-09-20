@@ -27,14 +27,14 @@
                      <div class="contacts-form__item data popup-service">
                         <select class="select-form" name="service">
                            <option value=""></option>
-                           <option value="Наружная Реклама">@lang('home.charity.finance')</option>
-                           <option value="Полиграфия">@lang('home.charity.medical')</option>
-                           <option value="Айдентика">@lang('home.charity.food')</option>
-                           <option value="Смм">@lang('home.charity.hygiene')</option>
-                           <option value="Создание Сайтов">@lang('home.charity.clothes')</option>
-                           <option value="УФ печать">@lang('home.charity.transport')</option>
-                           <option value="Печать на Одежде">@lang('home.charity.housing')</option>
-                           <option value="Печать на Одежде">@lang('home.charity.other')</option>
+                           <option value="finance">@lang('home.charity.finance')</option>
+                           <option value="medical">@lang('home.charity.medical')</option>
+                           <option value="food">@lang('home.charity.food')</option>
+                           <option value="hygiene">@lang('home.charity.hygiene')</option>
+                           <option value="clothes">@lang('home.charity.clothes')</option>
+                           <option value="transport">@lang('home.charity.transport')</option>
+                           <option value="housing">@lang('home.charity.housing')</option>
+                           <option value="other">@lang('home.charity.other')</option>
                         </select>
                         <p class="service-error error"></p>
                      </div>
@@ -90,7 +90,7 @@
                   </div>
                   <p class="popup__tesxt-aditional">@lang('form.pay.title_text')</p>
                   <div class="popup__bank">@lang('form.pay.bank')</div>
-                  <div class="popup__copy-btn copy-text">Скопировать счет
+                  <div class="popup__copy-btn copy-text @lang('language.current_lang')">@lang('form.pay.copy')
                   </div>
                </div>
                <div class="confirm">

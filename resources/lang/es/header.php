@@ -3,13 +3,13 @@
    return [ 
    'menu' => 
    [
-      'about' => 'О нас',
-      'services' => 'Услуги',
-      'poster' => 'Афиша',
-      'news' => 'Новости/Преса',
-      'help' => 'Взаимопомощь',
-      'contact' => 'Контакты',
+      'about' => 'Sobre nosotros',
+      'services' => 'Servicios',
+      'poster' => 'Agenda',
+      'news' => 'Noticias',
+      'help' => 'Ayuda mutua',
+      'contact' => 'Contactos',
    ],
-   'donate' => 'Пожертвовать',
+   'donate' => 'Donar',
    ];
 ?>
