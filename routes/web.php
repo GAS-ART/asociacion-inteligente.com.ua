@@ -141,3 +141,23 @@ Route::get('/{locale}/about-us', function ($locale) {
 
  }
 })->name('about_us.lang');
+
+Route::get('/{locale}/services', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('services');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('services');
+
+ }
+})->name('services.lang');
