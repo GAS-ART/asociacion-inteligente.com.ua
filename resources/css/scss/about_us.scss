@@ -30,9 +30,9 @@
     }
 
     &__avatar {
-        flex: 1 0 520px;
+        flex: 1 0 380px;
         @media (max-width: $tablet) {
-            max-width: 520px;
+            max-width: 380px;
             margin: 0 auto;
         }
     }
@@ -41,7 +41,7 @@
         position: relative;
         max-width: 380px;
         margin-bottom: 20px;
-        @include adaptiveValueREM('margin-right', 80, 20, 1920, 1200, 1);
+        @include adaptiveValueREM('margin-right', 50, 20, 1920, 1200, 1);
         img {
         position: relative;
         top: 0;
@@ -61,6 +61,8 @@
         font-size: 18px;
         line-height: 180%;
         color: #28478A;
+        text-align: center;
+        max-width: 380px;
         @media (max-width: $tablet) {
             text-align: center;
         }
@@ -72,6 +74,8 @@
 
     &__content--title {
         font-weight: 800;
+        position: relative;
+        top: -11px;
         @include adaptiveValueREM('font-size', 50,20);
         line-height: 63px;
         color: #292929;
@@ -79,6 +83,7 @@
         line-height: 126%;
         @media (max-width: $tablet) {
         text-align: center;
+        top: 0;
         }
     }
 

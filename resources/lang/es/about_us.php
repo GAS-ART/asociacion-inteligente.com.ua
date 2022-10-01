@@ -3,7 +3,7 @@
    return [
     'title' => 'Sobre nosotros',
     'direcotor' => [
-        'name' => 'Fundador de asociación Tetyana Svirska ',
+        'name' => 'Tetyana Svirska<br>Fundador de asociación',
         'title' => 'Asociación de Ucranianos',
         'text_1' => 'Asociación de Ucranianos" es una organización privada que desarrolla activamente sus actividades solidarias en España desde de 2022 ',
         'text_2' => '<span>Nuestra misión</span> es prestar todo tipo de asistencia a los ciudadanos ucranianos que se vieron obligados a abandonar su país e ir a España en relación con las hostilidades en Ucrania. ',

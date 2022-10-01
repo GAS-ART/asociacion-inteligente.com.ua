@@ -33,7 +33,7 @@
   <link type="text/css" rel="stylesheet" href="{{asset('css/lg-thumbnail.css')}}" />
   @endif
 
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=20' }}"> 
+   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=21' }}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
