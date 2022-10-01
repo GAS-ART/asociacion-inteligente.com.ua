@@ -33,7 +33,7 @@
   <link type="text/css" rel="stylesheet" href="{{asset('css/lg-thumbnail.css')}}" />
   @endif
 
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=19' }}"> 
+   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=20' }}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
@@ -43,7 +43,7 @@
    <script src="{{asset('js/lightgallery.min.js')}}"></script>
    @endif
 
-   <script src="{{asset('js/app.js') . '?_v=7' }}"></script>
+   <script src="{{asset('js/app.js') . '?_v=8' }}"></script>
 
    <!-- Meta Pixel Code -->
 <script>

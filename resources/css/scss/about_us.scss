@@ -39,6 +39,7 @@
 
     &__avatar--img {
         position: relative;
+        max-width: 380px;
         margin-bottom: 20px;
         @include adaptiveValueREM('margin-right', 80, 20, 1920, 1200, 1);
         img {

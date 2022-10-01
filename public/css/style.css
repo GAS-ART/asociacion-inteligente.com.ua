@@ -2917,6 +2917,7 @@ body.lock {
 }
 .about-us-director__avatar--img {
   position: relative;
+  max-width: 380px;
   margin-bottom: 20px;
 }
 @supports (margin-right: clamp( 1.25rem , -5rem  +  8.3333333333vw , 5rem )) {
