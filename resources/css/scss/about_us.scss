@@ -33,7 +33,8 @@
         flex: 1 0 380px;
         @media (max-width: $tablet) {
             max-width: 380px;
-            margin: 0 auto;
+            margin: 0 auto 30px auto;
+            flex: 1 1 auto;
         }
     }
 

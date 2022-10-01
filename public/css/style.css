@@ -2912,7 +2912,8 @@ body.lock {
 @media (max-width: 61.99875em) {
   .about-us-director__avatar {
     max-width: 380px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    flex: 1 1 auto;
   }
 }
 .about-us-director__avatar--img {
