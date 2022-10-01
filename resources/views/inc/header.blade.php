@@ -12,7 +12,7 @@
                <nav class="menu">
                   <ul class="menu__list">
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="{{ route('about_us.lang', ['locale' => __('language.current_lang')]) }}" class="menu__link">
                            @lang('header.menu.about')
                         </a>
                      </li>

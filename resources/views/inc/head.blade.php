@@ -25,11 +25,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat&display=swap" rel="stylesheet">
 
+  @if(Request::is('ru/about-us', 'es/about-us'))
+  <!-- lightgallery -->
+  <link type="text/css" rel="stylesheet" href="{{asset('css/lightgallery.css')}}" />
+  <!-- lightgallery plugins -->
+  <link type="text/css" rel="stylesheet" href="{{asset('css/lg-zoom.css')}}"/>
+  <link type="text/css" rel="stylesheet" href="{{asset('css/lg-thumbnail.css')}}" />
+  @endif
+
    <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=19' }}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+   @if(Request::is('ru/about-us', 'es/about-us'))
+   <script src="{{asset('js/lightgallery.min.js')}}"></script>
+   @endif
+
    <script src="{{asset('js/app.js') . '?_v=7' }}"></script>
 
    <!-- Meta Pixel Code -->

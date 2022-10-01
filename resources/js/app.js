@@ -267,6 +267,15 @@ window.onload = function () {
             payMethod.querySelector('input').setAttribute('checked', 'checked');
          });
       })
-
    }
+
+   const achievmentsGallery = document.querySelector('.about-us-achievments__gallery');
+
+   if (achievmentsGallery) {
+      lightGallery(achievmentsGallery), {
+         licenseKey: 'your_license_key',
+         speed: 500,
+      }
+   }
+
 }

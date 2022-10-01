@@ -121,3 +121,23 @@ Route::get('/{locale}/poster/charity_dinner', function ($locale) {
 
  }
 })->name('poster.charity_dinner.lang');
+
+Route::get('/{locale}/about-us', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('about_us');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('about_us');
+
+ }
+})->name('about_us.lang');

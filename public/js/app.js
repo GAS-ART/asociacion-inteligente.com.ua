@@ -297,6 +297,15 @@ window.onload = function () {
       });
     });
   }
+
+  var achievmentsGallery = document.querySelector('.about-us-achievments__gallery');
+
+  if (achievmentsGallery) {
+    lightGallery(achievmentsGallery), {
+      licenseKey: 'your_license_key',
+      speed: 500
+    };
+  }
 };
 
 /***/ }),
