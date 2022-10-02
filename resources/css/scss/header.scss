@@ -46,19 +46,20 @@ background-color: #fff;
 		@media (max-width: $mobile) {
 			position: absolute;
 			top: 60px;
-			right: -100%;
+			right: -120%;
 			height: 100vh;
 			background-color: $blue;
 			padding: 31.5px;
 			z-index: 50;
 			margin-right: unset;
 			transition: all 0.3s ease 0s;
+			width: 147.64px;
 			&.open{
 				right: 0;
 			}
 		}
 		@media (max-width: $mobileSmall) {
-		padding: 31px 21.5px;
+		padding: 31px 21.5px 31px 9px;
 		}
 	}
 
@@ -135,7 +136,16 @@ background-color: #fff;
 			}
 		}
 		@media (max-width: $mobileSmall) {
-		padding: 0 10px;
+			/*justify-content: flex-start;
+			//padding: 0 10px;
+			padding-left: 20px;
+			min-width: unset;
+			flex: 1 0 80px;
+			//padding-left: 3px;
+			flex: 1 0 116px;*/
+			
+			//justify-content: center;
+			min-width: 116px;
 		}
 	}
 }

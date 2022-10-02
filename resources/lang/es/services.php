@@ -3,7 +3,7 @@
 return [
    'title' => 'Servicios',
    'text' => 'La Asociación de Ucranianos en Girona presta asistencia social y jurídica a los ciudadanos ucranianos que emigraron a España.',
-   'button' => 'Получить помощь',
+   'button' => 'Recibir ayuda',
    'social' => [
     'title' => 'Puede recibir asistencia social en las siguientes áreas:',
     '1' => [
@@ -34,7 +34,7 @@ return [
     ],
    ],
    'legal' => [
-    'title' => 'Правовая помощь',
+    'title' => 'Asistencia legal',
     'text' => 'Nuestros abogados brindarán asistencia legal a los ciudadanos de Ucrania para resolver problemas relacionados con la implementación de la ley',
     'title_list' => 'Puede obtener asistencia en la preparación y obtención de documentos sobre los siguientes cuestiones:',
     'list_1' => 'qué documentos se requieren para obtener el estado de protección temporal;',
