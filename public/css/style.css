@@ -103,6 +103,13 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: icon-help;
+  font-display: swap;
+  src: url("/fonts/icon-help.woff2") format("woff2"), url("/fonts/icon-help.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 [class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
@@ -114,7 +121,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[class*=_icon_help-]:before {
+  font-family: "icon-help";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 [class*=_icon-]:before {
+  display: block;
+}
+
+[class*=_icon_help-]:before {
   display: block;
 }
 
@@ -148,6 +170,41 @@
 
 ._icon-vegetables:before {
   content: "\e907";
+}
+
+._icon_help-1:before {
+  content: "\e900";
+  color: #28478a;
+}
+
+._icon_help-2:before {
+  content: "\e901";
+  color: #28478a;
+}
+
+._icon_help-3:before {
+  content: "\e902";
+  color: #28478a;
+}
+
+._icon_help-4:before {
+  content: "\e903";
+  color: #28478a;
+}
+
+._icon_help-5:before {
+  content: "\e904";
+  color: #28478a;
+}
+
+._icon_help-6:before {
+  content: "\e905";
+  color: #28478a;
+}
+
+._icon_help-7:before {
+  content: "\e906";
+  color: #28478a;
 }
 
 * {
@@ -3469,6 +3526,7 @@ body.lock {
   }
 }
 
+/*======================TEMPLATES======================*/
 .help {
   margin-bottom: 100px;
 }
@@ -3496,6 +3554,8 @@ body.lock {
   }
 }
 
+/*======================TEMPLATES======================*/
+/*======================BANER======================*/
 .help-baner._baner {
   background: linear-gradient(0deg, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.2)), linear-gradient(86.4deg, rgba(41, 41, 41, 0.5) 0.66%, rgba(41, 41, 41, 0) 82.38%), url("/img/help/main.jpg");
   background-size: cover;
@@ -3515,6 +3575,8 @@ body.lock {
   padding-bottom: 14.584%;
 }
 
+/*======================BANER======================*/
+/*======================HELP======================*/
 .help__content-above-img {
   display: flex;
   justify-content: space-between;
@@ -3615,6 +3677,66 @@ body.lock {
   }
 }
 
+/*======================HELP======================*/
+/*======================ICONS======================*/
+.help-icons__body {
+  display: grid;
+  grid-template-columns: repeat(4, 277px);
+  grid-template-rows: repeat(2, auto);
+  gap: 30px;
+}
+.help-icons__icon {
+  transition: all 0.8s ease 0s;
+  padding-top: 5px;
+}
+.help-icons__icon:hover {
+  background-color: #28478A;
+}
+.help-icons__icon:hover .help-icons__img {
+  color: yellow;
+}
+.help-icons__icon:hover .help-icons__img::after {
+  background-color: #FFFFFF;
+}
+.help-icons__icon:hover .help-icons__img::before {
+  color: yellow;
+}
+.help-icons__icon:hover .help-icons__text {
+  color: #ffffff;
+}
+.help-icons__img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  font-size: 2.5rem;
+  margin: 0 auto 15px auto;
+  transition: all 0.8s ease 0s;
+}
+.help-icons__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FAD900;
+  opacity: 0.15;
+  transition: all 0.3s ease 0s;
+}
+.help-icons__text {
+  max-width: 237px;
+  color: #4A4E57;
+  line-height: 180%;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.8s ease 0s;
+}
+
+/*======================ICONS======================*/
 .page-404 {
   position: relative;
   width: 100%;
