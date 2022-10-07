@@ -303,8 +303,8 @@ window.onload = function () {
             $(".name-error").html('');
           }
 
-          if (err !== null && err !== void 0 && (_err$responseJSON14 = err.responseJSON) !== null && _err$responseJSON14 !== void 0 && (_err$responseJSON14$e = _err$responseJSON14.errors) !== null && _err$responseJSON14$e !== void 0 && _err$responseJSON14$e.phone) {
-            $(".contact-error").html(err.responseJSON.errors.phone[0]);
+          if (err !== null && err !== void 0 && (_err$responseJSON14 = err.responseJSON) !== null && _err$responseJSON14 !== void 0 && (_err$responseJSON14$e = _err$responseJSON14.errors) !== null && _err$responseJSON14$e !== void 0 && _err$responseJSON14$e.contact) {
+            $(".contact-error").html(err.responseJSON.errors.contact[0]);
           } else {
             $(".contact-error").html('');
             ;

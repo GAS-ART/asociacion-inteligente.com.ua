@@ -269,8 +269,8 @@ window.onload = function () {
                } else {
                   $(".name-error").html('');
                }
-               if (err?.responseJSON?.errors?.phone) {
-                  $(".contact-error").html(err.responseJSON.errors.phone[0]);
+               if (err?.responseJSON?.errors?.contact) {
+                  $(".contact-error").html(err.responseJSON.errors.contact[0]);
                } else {
                   $(".contact-error").html('');;
                }
