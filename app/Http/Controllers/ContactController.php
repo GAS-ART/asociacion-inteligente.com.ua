@@ -47,7 +47,7 @@ class ContactController extends Controller
       $help = $req->input('help');
 
       mail::send(['html' => 'mail_help'], ['name' => $name, 'contact' => $contact, 'info' => $info, 'help' => $help,], function($message){
-         $message->to('temoha1386@gmail.com')->subject('СООБЩЕНИЕ ИЗ СТРАНИЦЫ ВЗАИМОПОМОЩЬ');
+         $message->to('inteli.gente.ua@gmail.com')->subject('СООБЩЕНИЕ ИЗ СТРАНИЦЫ ВЗАИМОПОМОЩЬ');
          });
    }
 }
