@@ -161,3 +161,23 @@ Route::get('/{locale}/services', function ($locale) {
 
  }
 })->name('services.lang');
+
+Route::get('/{locale}/mutual-aid', function ($locale) {
+   
+   if (! in_array($locale, ['es', 'ru'])) { 
+
+      abort(404);
+
+   }  else if ($locale == 'es') {
+
+      App::setLocale('es');
+      return view('help');
+
+   }
+   else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('help');
+
+ }
+})->name('help.lang');

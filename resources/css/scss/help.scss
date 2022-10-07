@@ -1,0 +1,132 @@
+%_sectionMargin{
+    margin-bottom: 100px;
+    @media (max-width: $mobile) {
+       margin-bottom: 30px;
+    }
+}
+%_btn-help{
+padding: 17px 68px;
+background-color: $yellow;
+font-weight: 500;
+transition: all 0.3s ease 0s;
+&:hover{
+    background-color: $mainColor;
+    color: $yellow;
+ }
+ @media (max-width: $mobile) {
+ display: block;
+ padding: 17px 0;
+ width: 100%;
+ }
+}
+
+.help-baner{
+    &._baner{
+       background: linear-gradient(0deg, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.2)), linear-gradient(86.4deg, rgba(41, 41, 41, 0.5) 0.66%, rgba(41, 41, 41, 0) 82.38%), url('/img/help/main.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       @media (max-width: $mobile) {
+          margin-bottom: 30px;
+       }
+       p{
+        color: #ffffff;
+        max-width: 760px;
+        line-height: 180%;
+       }
+    }
+    ._baner__container{
+       padding-bottom: 14.584%;
+    }
+ }
+
+ .help {
+    @extend %_sectionMargin;
+    &__container {
+    }
+
+    &__content-above-img {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        @media (max-width: $mobile) {
+        flex-direction: column;
+        margin-bottom: 60px;
+        }
+    }
+
+    &__title {
+        max-width: 430px;
+        @include adaptiveValueREM('font-size', 50, 30);
+        color: $title;
+        line-height: 126%;
+        margin-right: 30px;
+        @media (max-width: $mobile) {
+        margin-right: 0;
+        text-align: center;
+        margin: 0 auto 20px auto;
+        }
+    }
+
+    &__item {
+        max-width: 650px;
+        @media (max-width: $mobile) {
+        margin: 0 auto;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        line-height: 180%; 
+        color: $text;
+            p{
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+        @media (max-width: $mobile) {
+        text-align: center;
+        margin-bottom: 40px;
+        }
+    }
+
+    &__btn {
+        @extend %_btn-help;
+    }
+
+    &__img {
+        position: relative;
+        margin-bottom: 100px;
+        @media (max-width: $tablet) {
+            margin-bottom: 60px;
+        }
+        img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        }
+    }
+
+    &__content-below-img {
+        display: flex;
+        justify-content: space-between;
+        color: $text;
+        line-height: 180%;
+        p{
+            max-width: 580px;
+            &:not(:last-child){
+                margin-right: 25px;
+                @media (max-width: $mobile) {
+                margin-right: 0;
+                margin-bottom: 20px;
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+}
+
