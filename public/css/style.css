@@ -3527,27 +3527,27 @@ body.lock {
 }
 
 /*======================TEMPLATES======================*/
-.help {
+.help-form, .help-icons, .help {
   margin-bottom: 100px;
 }
 @media (max-width: 47.99875em) {
-  .help {
+  .help-form, .help-icons, .help {
     margin-bottom: 30px;
   }
 }
 
-.help__btn {
+.help-form__btn, .help__btn {
   padding: 17px 68px;
   background-color: #FAD900;
   font-weight: 500;
   transition: all 0.3s ease 0s;
 }
-.help__btn:hover {
+.help-form__btn:hover, .help__btn:hover {
   background-color: #111111;
   color: #FAD900;
 }
 @media (max-width: 47.99875em) {
-  .help__btn {
+  .help-form__btn, .help__btn {
     display: block;
     padding: 17px 0;
     width: 100%;
@@ -3685,9 +3685,29 @@ body.lock {
   grid-template-rows: repeat(2, auto);
   gap: 30px;
 }
+@media (max-width: 74.375em) {
+  .help-icons__body {
+    grid-template-columns: repeat(4, 226px);
+    gap: 30px 15px;
+    justify-content: center;
+  }
+}
+@media (max-width: 61.99875em) {
+  .help-icons__body {
+    grid-template-columns: repeat(3, 246px);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (max-width: 47.99875em) {
+  .help-icons__body {
+    grid-template-columns: repeat(1, 270px);
+    grid-template-rows: repeat(7, auto);
+  }
+}
 .help-icons__icon {
   transition: all 0.8s ease 0s;
   padding-top: 5px;
+  background: #FBFCF6;
 }
 .help-icons__icon:hover {
   background-color: #28478A;
@@ -3704,6 +3724,18 @@ body.lock {
 .help-icons__icon:hover .help-icons__text {
   color: #ffffff;
 }
+@media (max-width: 61.99875em) {
+  .help-icons__icon:nth-child(7) {
+    grid-column-start: span 3;
+    max-width: 246px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 47.99875em) {
+  .help-icons__icon:nth-child(7) {
+    grid-column-start: span 1;
+  }
+}
 .help-icons__img {
   position: relative;
   width: 80px;
@@ -3711,6 +3743,9 @@ body.lock {
   padding: 20px;
   font-size: 2.5rem;
   margin: 0 auto 15px auto;
+  transition: all 0.8s ease 0s;
+}
+.help-icons__img::before {
   transition: all 0.8s ease 0s;
 }
 .help-icons__img::after {
@@ -3736,6 +3771,61 @@ body.lock {
   transition: all 0.8s ease 0s;
 }
 
+/*======================ICONS======================*/
+/*======================FORM======================*/
+.help-form__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 180%;
+  color: #4A4E57;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 47.99875em) {
+  .help-form__title {
+    font-size: 18px;
+  }
+}
+.help-form__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 15px 40px;
+  margin-bottom: 15px;
+}
+@media (max-width: 47.99875em) {
+  .help-form__body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+.help-form__item:nth-child(3), .help-form__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+@media (max-width: 47.99875em) {
+  .help-form__item:nth-child(3), .help-form__item:nth-child(4) {
+    grid-column-start: unset;
+  }
+}
+.help-form__input {
+  width: 100%;
+  padding: 20px 12px 13px 5px;
+  font-size: 14px;
+  line-height: 180%;
+  color: #000000;
+  height: 50px;
+  border: 1px solid #232322;
+}
+.help-form__textarea {
+  width: 100%;
+  font-size: 14px;
+  line-height: 180%;
+  color: #000000;
+  padding: 20px 13px 13px 5px;
+  min-height: 100px;
+  resize: none;
+  border: 1px solid #232322;
+}
 /*======================ICONS======================*/
 .page-404 {
   position: relative;

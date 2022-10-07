@@ -70,6 +70,7 @@ window.onload = function () {
    //Стилизация Select
    const bookingForm = document.querySelector('#bookingform');
    const questionForm = document.querySelector('#questionForm');
+   const helpForm = document.querySelector('#helpform');
    let placeholderText = 'Вид помощи';
    if (bookingForm.classList.contains('es')) {
       placeholderText = 'Elige el servicio';
@@ -215,6 +216,63 @@ window.onload = function () {
                   $(".phone-error").html(err.responseJSON.errors.phone[0]);
                } else {
                   $(".phone-error").html('');;
+               }
+            }
+         }
+      });
+   });
+
+   $("#helpform").submit(function (event) {
+      event.preventDefault();
+      $.ajax({
+         type: 'POST',
+         url: 'https://asociacion-inteligente.com.ua/feedback-help',
+         data: new FormData(this),
+         contentType: false,
+         cache: false,
+         processData: false,
+         success: function () {
+            $(".name-error").html('');
+            $(".contact-error").html('');
+            $("#lead").addClass("open");
+            $("#lead").addClass("send");
+            popUp('lead');
+            helpForm.reset();
+         },
+         error: function (err) {
+            if (helpForm.classList.contains('es')) {
+               if (err?.responseJSON?.errors?.name) {
+                  let text = err.responseJSON.errors.name[0]
+                  if (text == 'Не заполнено поле "Имя"') {
+                     $(".name-error").html('El campo Nombre no esta rellenado');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+                     $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+                     $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+                  }
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.contact) {
+                  let text = err.responseJSON.errors.contact[0]
+                  if (text == 'Не заполнено поле "Контакты"') {
+                     $(".contact-error").html('El campo no esta rellenado Contactos');
+                  } 
+               } else {
+                  $(".contact-error").html('');
+               }
+            } else {
+               if (err?.responseJSON?.errors?.name) {
+                  $(".name-error").html(err.responseJSON.errors.name[0]);
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  $(".contact-error").html(err.responseJSON.errors.phone[0]);
+               } else {
+                  $(".contact-error").html('');;
                }
             }
          }

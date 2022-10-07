@@ -36,4 +36,17 @@ class ContactController extends Controller
          $message->to('inteli.gente.ua@gmail.com')->subject('ВОПРОС ИЗ СТРАНИЦЫ КОНТАКТЫ');
          });
    }
+
+   public function helpForm (HelpRequest $req){
+
+      /*ДАННЫЕ ИЗ ФОРМЫ*/
+      $name = $req->input('name');
+      $contact = $req->input('contact');
+      $info = $req->input('info');
+      $help = $req->input('help');
+
+      mail::send(['html' => 'mail_help'], ['name' => $name, 'contact' => $contact, 'info' => $info, 'help' => $help,], function($message){
+         $message->to('temoha1386@gmail.com')->subject('СООБЩЕНИЕ ИЗ СТРАНИЦЫ ВЗАИМОПОМОЩЬ');
+         });
+   }
 }

@@ -80,6 +80,7 @@ window.onload = function () {
 
   var bookingForm = document.querySelector('#bookingform');
   var questionForm = document.querySelector('#questionForm');
+  var helpForm = document.querySelector('#helpform');
   var placeholderText = 'Вид помощи';
 
   if (bookingForm.classList.contains('es')) {
@@ -243,6 +244,69 @@ window.onload = function () {
             $(".phone-error").html(err.responseJSON.errors.phone[0]);
           } else {
             $(".phone-error").html('');
+            ;
+          }
+        }
+      }
+    });
+  });
+  $("#helpform").submit(function (event) {
+    event.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: 'https://asociacion-inteligente.com.ua/feedback-help',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function success() {
+        $(".name-error").html('');
+        $(".contact-error").html('');
+        $("#lead").addClass("open");
+        $("#lead").addClass("send");
+        (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)('lead');
+        helpForm.reset();
+      },
+      error: function error(err) {
+        if (helpForm.classList.contains('es')) {
+          var _err$responseJSON11, _err$responseJSON11$e, _err$responseJSON12, _err$responseJSON12$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON11 = err.responseJSON) !== null && _err$responseJSON11 !== void 0 && (_err$responseJSON11$e = _err$responseJSON11.errors) !== null && _err$responseJSON11$e !== void 0 && _err$responseJSON11$e.name) {
+            var _text6 = err.responseJSON.errors.name[0];
+
+            if (_text6 == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('El campo Nombre no esta rellenado');
+            } else if (_text6 == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+            } else if (_text6 == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON12 = err.responseJSON) !== null && _err$responseJSON12 !== void 0 && (_err$responseJSON12$e = _err$responseJSON12.errors) !== null && _err$responseJSON12$e !== void 0 && _err$responseJSON12$e.contact) {
+            var _text7 = err.responseJSON.errors.contact[0];
+
+            if (_text7 == 'Не заполнено поле "Контакты"') {
+              $(".contact-error").html('El campo no esta rellenado Contactos');
+            }
+          } else {
+            $(".contact-error").html('');
+          }
+        } else {
+          var _err$responseJSON13, _err$responseJSON13$e, _err$responseJSON14, _err$responseJSON14$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON13 = err.responseJSON) !== null && _err$responseJSON13 !== void 0 && (_err$responseJSON13$e = _err$responseJSON13.errors) !== null && _err$responseJSON13$e !== void 0 && _err$responseJSON13$e.name) {
+            $(".name-error").html(err.responseJSON.errors.name[0]);
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON14 = err.responseJSON) !== null && _err$responseJSON14 !== void 0 && (_err$responseJSON14$e = _err$responseJSON14.errors) !== null && _err$responseJSON14$e !== void 0 && _err$responseJSON14$e.phone) {
+            $(".contact-error").html(err.responseJSON.errors.phone[0]);
+          } else {
+            $(".contact-error").html('');
             ;
           }
         }

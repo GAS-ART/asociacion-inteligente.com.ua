@@ -22,7 +22,7 @@
                     <p>@lang('help.help.text_1')</p>
                     <p>@lang('help.help.text_2')</p>
                 </div>
-                <button class="help__btn _btn-help">@lang('help.btn')</button>
+                <button class="help__btn">@lang('help.btn')</button>
             </div>
             
         </div>
@@ -68,6 +68,32 @@
                 <div class="help-icons__text">@lang('help.icons.text_7')</div>
             </div>
         </div>
+    </div>
+    
+</section>
+<section class="help-form">
+    <div class="help-form__container">
+        <div class="help-form__title">@lang('help.form.title')</div>
+        <form id="helpform" class="help-form__form @lang('language.current_lang')" name="helpform" action="#" method="POST" autocomplete="on" >
+            @csrf
+            <div class="help-form__body">
+                <div class="help-form__item">
+                    <input class="help-form__input" type="text" name="name" placeholder="@lang('help.form.name')">
+                    <p class="name-error error"></p>
+                </div>
+                <div class="help-form__item">
+                    <input class="help-form__input" type="text" name="contact" placeholder="@lang('help.form.contacts')">
+                    <p class="contact-error error"></p>
+                </div>
+                <div class="help-form__item">
+                    <textarea class="help-form__textarea" name="info" placeholder="@lang('help.form.info')"></textarea>
+                </div>
+                <div class="help-form__item">
+                    <textarea class="help-form__textarea" name="help" placeholder="@lang('help.form.help')"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="help-form__btn">@lang('help.btn')</button>
+        </form>
     </div>
     
 </section>
