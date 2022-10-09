@@ -22,7 +22,7 @@
                     <p>@lang('help.help.text_1')</p>
                     <p>@lang('help.help.text_2')</p>
                 </div>
-                <button class="help__btn">@lang('help.btn')</button>
+                <button data-popup-id="pay" class="help__btn link-on-popup" >@lang('help.btn')</button>
             </div>
             
         </div>
@@ -39,31 +39,31 @@
 <section class="help-icons">
     <div class="help-icons__container">
         <div class="help-icons__body">
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-1"></div>
                 <div class="help-icons__text">@lang('help.icons.text_1')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-2"></div>
                 <div class="help-icons__text">@lang('help.icons.text_2')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-3"></div>
                 <div class="help-icons__text">@lang('help.icons.text_3')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-4"></div>
                 <div class="help-icons__text">@lang('help.icons.text_4')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-5"></div>
                 <div class="help-icons__text">@lang('help.icons.text_5')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-6"></div>
                 <div class="help-icons__text">@lang('help.icons.text_6')</div>
             </div>
-            <div class="help-icons__icon">
+            <div class="help-icons__icon link-on-popup" data-popup-id="lead">
                 <div class="help-icons__img _icon_help-7"></div>
                 <div class="help-icons__text">@lang('help.icons.text_7')</div>
             </div>

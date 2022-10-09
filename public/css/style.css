@@ -378,12 +378,18 @@ body.lock {
     width: 147.64px;
   }
   .header__menu.open {
-    right: 0;
+    right: -15px;
+    right: -20px;
+    width: 217px;
   }
 }
 @media (max-width: 29.99875em) {
   .header__menu {
     padding: 31px 21.5px 31px 9px;
+  }
+  .header__menu.open {
+    right: -15px;
+    width: 147.64px;
   }
 }
 .header__burger {
@@ -400,6 +406,12 @@ body.lock {
   font-size: 0.9375rem;
   font-weight: 500;
   line-height: 1.26;
+}
+@media (max-width: 47.99875em) {
+  .header__actions {
+    position: relative;
+    left: 15px;
+  }
 }
 .header__language {
   position: relative;
@@ -3708,6 +3720,8 @@ body.lock {
   transition: all 0.8s ease 0s;
   padding-top: 5px;
   background: #FBFCF6;
+  min-height: 295px;
+  cursor: pointer;
 }
 .help-icons__icon:hover {
   background-color: #28478A;

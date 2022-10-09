@@ -169,6 +169,8 @@ transition: all 0.3s ease 0s;
         transition: all 0.8s ease 0s;
         padding-top: 5px;
         background: #FBFCF6;
+        min-height: 295px;
+        cursor: pointer;
         &:hover{
             background-color: $blue;
             .help-icons__img{

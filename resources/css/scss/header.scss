@@ -55,11 +55,17 @@ background-color: #fff;
 			transition: all 0.3s ease 0s;
 			width: 147.64px;
 			&.open{
-				right: 0;
+				right: -15px;
+				right: -20px;
+    			width: 217px;
 			}
 		}
 		@media (max-width: $mobileSmall) {
 		padding: 31px 21.5px 31px 9px;
+		&.open{
+			right: -15px;
+			width: 147.64px;
+		}
 		}
 	}
 
@@ -76,6 +82,10 @@ background-color: #fff;
 		font-size: $menuSize;
 		font-weight: 500;
 		line-height: 1.26;
+		@media (max-width: $mobile) {
+		position: relative;
+		left: 15px;
+		}
 	}
 
 	&__language {
