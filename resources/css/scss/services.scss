@@ -25,9 +25,16 @@
 
     &__container {
     }
-
+    h2{
+        &:first-child{
+            margin-bottom: 25px;
+            @media (max-width: $mobile) {
+            text-align: center;
+            }
+        }
+    }
     &__title {
-        @include adaptiveValueREM('font-size', 50,20);
+        //@include adaptiveValueREM('font-size', 50,20);
         color: #292929;
         line-height: 126%;
         margin-bottom: 50px;

@@ -10,12 +10,12 @@
     <div class="_baner__container">
         <div class="_baner__body">
             <h1 class="_baner__title">@lang('services.title')</h1>
-            <p>@lang('services.text')</p>
         </div>
     </div>
 </section>
 <section class="services-social">
     <div class="services-social__container">
+    <h2>@lang('services.text')</h2>
         <h2 class="services-social__title">@lang('services.social.title')</h2>
         <div class="services-social__body">
             <div class="services-social__item">
