@@ -1,7 +1,7 @@
 <?php
 
 return [
-   'tittle' => 'RELLENA EL FORMULARIO',
+   'tittle' => 'Rellena el formulario',
    'title_text' => 'En que podeis ayudar a Asociacion de Ucranianos?',
    'name' => 'Nombre',
    'phone' => 'Telefono',
