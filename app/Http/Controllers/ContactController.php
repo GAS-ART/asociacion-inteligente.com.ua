@@ -22,7 +22,7 @@ class ContactController extends Controller
       $page = $req->input('page');
 
       mail::send(['html' => 'mail_main'], ['name' => $name, 'text' => $text, 'phone' => $phone, 'page' => $page, ], function($message){
-         $message->to('temoha1386@gmail.com')->subject('ЗАЯВКА ИЗ ГЛАВНОЙ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+         $message->to('inteli.gente.ua@gmail.com')->subject('ЗАЯВКА ИЗ ГЛАВНОЙ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
          });
 }
    
