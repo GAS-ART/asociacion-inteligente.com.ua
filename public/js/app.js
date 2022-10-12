@@ -81,6 +81,7 @@ window.onload = function () {
   var bookingForm = document.querySelector('#bookingform');
   var questionForm = document.querySelector('#questionForm');
   var helpForm = document.querySelector('#helpform');
+  var mainForm = document.querySelector('#mainform');
   var placeholderText = 'Вид помощи';
 
   if (bookingForm.classList.contains('es')) {
@@ -307,6 +308,75 @@ window.onload = function () {
             $(".contact-error").html(err.responseJSON.errors.contact[0]);
           } else {
             $(".contact-error").html('');
+            ;
+          }
+        }
+      }
+    });
+  });
+  $("#mainform").submit(function (event) {
+    event.preventDefault();
+    $(".popup__load").addClass('active');
+    $.ajax({
+      type: 'POST',
+      url: 'https://asociacion-inteligente.com.ua/feedback-main',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function success() {
+        $(".name-error").html('');
+        $(".phone-error").html('');
+        $(".popup").addClass("send");
+        mainForm.reset();
+        $(".popup__load").removeClass('active');
+      },
+      error: function error(err) {
+        $(".popup__load").removeClass('active');
+
+        if (mainForm.classList.contains('es')) {
+          var _err$responseJSON15, _err$responseJSON15$e, _err$responseJSON16, _err$responseJSON16$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON15 = err.responseJSON) !== null && _err$responseJSON15 !== void 0 && (_err$responseJSON15$e = _err$responseJSON15.errors) !== null && _err$responseJSON15$e !== void 0 && _err$responseJSON15$e.name) {
+            var _text8 = err.responseJSON.errors.name[0];
+
+            if (_text8 == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('El campo Nombre no esta rellenado');
+            } else if (_text8 == 'Поле "Имя" не должно содержать цифр') {
+              $(".name-error").html('Campo "Nombre" no puede contener los números');
+            } else if (_text8 == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('Campo "Nombre" Debe contener 2 o mas simbolos');
+            } else if (_text8 == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('Campo "Nombre" no puede contener mas de 80 simbolos');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON16 = err.responseJSON) !== null && _err$responseJSON16 !== void 0 && (_err$responseJSON16$e = _err$responseJSON16.errors) !== null && _err$responseJSON16$e !== void 0 && _err$responseJSON16$e.phone) {
+            var _text9 = err.responseJSON.errors.phone[0];
+
+            if (_text9 == 'Не заполнено поле "Номер телефона"') {
+              $(".phone-error").html('El campo no esta rellenado telefono');
+            } else if (_text9 == 'Не верный формат номера телефона') {
+              $(".phone-error").html('Introduce un telefono válido');
+            }
+          } else {
+            $(".phone-error").html('');
+          }
+        } else {
+          var _err$responseJSON17, _err$responseJSON17$e, _err$responseJSON18, _err$responseJSON18$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON17 = err.responseJSON) !== null && _err$responseJSON17 !== void 0 && (_err$responseJSON17$e = _err$responseJSON17.errors) !== null && _err$responseJSON17$e !== void 0 && _err$responseJSON17$e.name) {
+            $(".name-error").html(err.responseJSON.errors.name[0]);
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON18 = err.responseJSON) !== null && _err$responseJSON18 !== void 0 && (_err$responseJSON18$e = _err$responseJSON18.errors) !== null && _err$responseJSON18$e !== void 0 && _err$responseJSON18$e.phone) {
+            $(".phone-error").html(err.responseJSON.errors.phone[0]);
+          } else {
+            $(".phone-error").html('');
             ;
           }
         }

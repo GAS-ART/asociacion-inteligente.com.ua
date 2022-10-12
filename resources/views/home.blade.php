@@ -89,7 +89,7 @@
                <img src="{{ asset('img/home/help/1.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_1')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
 
          <div class="help__item item-help">
@@ -97,7 +97,7 @@
                <img src="{{ asset('img/home/help/2.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_2')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
 
          <div class="help__item item-help">
@@ -105,7 +105,7 @@
                <img src="{{ asset('img/home/help/3.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_3')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
 
          <div class="help__item item-help">
@@ -113,7 +113,7 @@
                <img src="{{ asset('img/home/help/4.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_4')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
 
          <div class="help__item item-help">
@@ -121,7 +121,7 @@
                <img src="{{ asset('img/home/help/5.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_5')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
 
          <div class="help__item item-help">
@@ -129,7 +129,7 @@
                <img src="{{ asset('img/home/help/6.jpg') }}" alt="">
             </div>
             <h3 class="item-help__title">@lang('home.help.item_6')</h3>
-            <a href="#" class="item-help__link">@lang('home.help.link')</a>
+            <button data-popup-id="main" class="item-help__link link-on-popup">@lang('home.help.link')</button>
          </div>
       </div>
    </div>

@@ -8,9 +8,23 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ContactRequest;
 use App\Http\Requests\QuestionRequest;
 use App\Http\Requests\HelpRequest;
+use App\Http\Requests\MainRequest;
 
 class ContactController extends Controller
 {
+
+   public function mainForm (MainRequest $req){
+
+      /*ДАННЫЕ ИЗ ФОРМЫ*/
+      $name = $req->input('name');
+      $phone = $req->input('phone');
+      $text = $req->input('text');
+      $page = $req->input('page');
+
+      mail::send(['html' => 'mail'], ['name' => $name, 'text' => $text, 'phone' => $phone, 'page' => $page, ], function($message){
+         $message->to('inteli.gente.ua@gmail.com')->subject('ЗАЯВКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+         });
+}
    
       public function feedBackForm (ContactRequest $req){
 
@@ -21,8 +35,8 @@ class ContactController extends Controller
          $text = $req->input('text');
          $page = $req->input('page');
 
-         mail::send(['html' => 'mail'], ['name' => $name, 'service' => $service, 'text' => $text, 'phone' => $phone, 'page' => $page, ], function($message){
-            $message->to('inteli.gente.ua@gmail.com')->subject('ЗАЯВКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+         mail::send(['html' => 'mail_main'], ['name' => $name, 'service' => $service, 'text' => $text, 'phone' => $phone, 'page' => $page, ], function($message){
+            $message->to('temoha1386@gmail.com')->subject('ЗАЯВКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
             });
    }
 
@@ -50,4 +64,6 @@ class ContactController extends Controller
          $message->to('inteli.gente.ua@gmail.com')->subject('СООБЩЕНИЕ ИЗ СТРАНИЦЫ ВЗАИМОПОМОЩЬ');
          });
    }
+
+   
 }

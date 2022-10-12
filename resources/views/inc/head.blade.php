@@ -43,7 +43,7 @@
    <script src="{{asset('js/lightgallery.min.js')}}"></script>
    @endif
 
-   <script src="{{asset('js/app.js') . '?_v=8' }}"></script>
+   <script src="{{asset('js/app.js') . '?_v=9' }}"></script>
 
    <!-- Meta Pixel Code -->
 <script>
