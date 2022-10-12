@@ -82,7 +82,7 @@
 </section>
 <section class="help">
    <div class="help__container">
-      <h2 class="help__title">@lang('home.help.title')</h2>
+      <h2 class="help__title-main">@lang('home.help.title')</h2>
       <div class="help__body">
          <div class="help__item item-help">
             <div class="item-help__img">

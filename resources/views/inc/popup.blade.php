@@ -8,7 +8,7 @@
                <img src="{{asset('img/icons/load.gif')}}" alt="">
             </div>
             <div class="popup__form">
-               <div class="popup__title">
+               <div class="popup__title @lang('language.current_lang')">
                   <h4>@lang('form.tittle')</h4>
                   <p>@lang('form.title_text')</p>
                </div>
@@ -116,7 +116,7 @@
                <img src="{{asset('img/icons/load.gif')}}" alt="">
             </div>
             <div class="popup__form">
-               <div class="popup__title">
+               <div class="popup__title @lang('language.current_lang')">
                   <h4>@lang('form.tittle')</h4>
                   <p>@lang('form.main.title_text')</p>
                </div>
