@@ -65,7 +65,7 @@
                 </ul>
             </div>
         </div>
-        <div class="services-social__btn">@lang('services.button')</div>
+        <button data-popup-id="main" class="services-social__btn link-on-popup">@lang('services.button')</button>
     </div>
 </section>
 <section class="services-legal">
@@ -87,7 +87,7 @@
                     <li class="services-legal__list-item">@lang('services.legal.list_6')</li>
                     <li class="services-legal__list-item">@lang('services.legal.list_7')</li>
                 </ul>
-                <div class="services-social__btn">@lang('services.button')</div>
+                <button data-popup-id="main" class="services-social__btn link-on-popup">@lang('services.button')</button>
             </div>
 
         </div>
