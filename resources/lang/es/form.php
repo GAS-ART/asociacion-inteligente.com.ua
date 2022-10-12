@@ -19,6 +19,9 @@ return [
       'qustion' => [
          'btn' => 'Hacer una pregunta',
       ],
+      'main' => [
+         'title_text' => 'En que podemos ayudarte?'
+      ]
 ]
 
 ?>
